@@ -1,0 +1,74 @@
+###input.jsx 
+
+import React from 'react';
+import { cn } from '@repo/utils';
+
+export const Input = React.forwardRef(
+  ({ className, type = 'text', ...props }, ref) => {
+    return (
+      <input
+        type={type}
+        className={cn(
+          'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-2 ring-offset-background file:border-0 file:bg-transparent file:text-2 file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+
+Input.displayName = 'Input';
+
+
+
+### component config 
+
+input: {
+    id: 'input',
+    name: 'Input',
+    type: 'simple',
+    path: '@repo/components',
+    importName: 'Input',
+    description: 'A text input field for user input',
+    additionalProps: [
+      {
+        name: 'type',
+        type: 'select',
+        options: ['text', 'email', 'password', 'number', 'tel', 'url', 'search'],
+        defaultValue: 'text',
+        description: 'HTML input type',
+      },
+      {
+        name: 'placeholder',
+        type: 'text',
+        defaultValue: 'Enter text...',
+        placeholder: 'Placeholder text',
+        description: 'Placeholder text shown when empty',
+      },
+      {
+        name: 'disabled',
+        type: 'boolean',
+        defaultValue: false,
+        description: 'Disables the input',
+      },
+    ],
+  },
+
+
+### componentRender.jsx
+
+      case 'input':
+        return (
+          <div className="w-full max-w-sm">
+            <Input 
+              {...restProps}
+              className={customClassName || ''}
+            />
+          </div>
+        );
+      
+
+
+
