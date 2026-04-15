@@ -33,3 +33,4 @@ export {
   TooltipDemo,
 } from './ui/tooltip/index.js';
 export { Input } from "./ui/input/index.js"
+export { Alert, AlertTitle, AlertDescription, AlertAction } from './ui/alert/index.js';

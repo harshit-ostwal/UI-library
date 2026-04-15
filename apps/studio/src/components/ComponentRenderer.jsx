@@ -18,6 +18,9 @@ import {
   TooltipTrigger,
   TooltipContent,
   Input,
+  Alert,
+  AlertTitle,
+  AlertDescription,
 } from '@repo/components';
 import { extractPropsFromVariants, getDefaultProps } from '../utils/extractComponentProps.js';
 import { generateComponentCode } from '../utils/generateCode.js';
@@ -152,12 +155,19 @@ export function ComponentRenderer({ componentId }) {
         );
        case 'input':
         return (
-          <div className="w-full max-w-sm">
             <Input
               {...restProps}
               className={customClassName || ''}
             />
-          </div>
+        );
+      case 'alert':
+        return (
+          <Alert {...restProps} className={customClassName || ''}>
+            <AlertTitle>{propValues.title || 'Alert Title '}</AlertTitle>
+            <AlertDescription>
+              {propValues.description || 'Alert description goes here.'}
+            </AlertDescription>
+          </Alert>
         );
 
       

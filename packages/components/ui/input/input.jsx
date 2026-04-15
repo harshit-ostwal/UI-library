@@ -4,7 +4,7 @@ import { cn } from '@repo/utils';
 export const Input = React.forwardRef(
   ({ className, type = 'text', ...props }, ref) => {
     return (
-     <div>hello</div>
+     <div>hello world </div>
     );
   }
 );

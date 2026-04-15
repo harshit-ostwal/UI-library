@@ -1,4 +1,5 @@
 import { buttonVariants, buttonVariantsConfig } from '@repo/components/ui/button/button.styles.js';
+import { alertVariants, alertVariantsConfig } from '@repo/components/ui/alert/alert.style.js';
 
 /**
  * Component registry with auto-extracted props from CVA configs
@@ -19,7 +20,7 @@ export const componentConfigs = {
     variantsConfigRaw: buttonVariantsConfig,
     additionalProps: [
       {
-        name: 'BUTTON VALUE ',
+        name: 'children',
         type: 'text',
         defaultValue: 'Button',
         placeholder: 'Button text',
@@ -149,7 +150,7 @@ export const componentConfigs = {
 
   input: {
     id: 'input',
-    name: 'Input bhai',
+    name: 'Input',
     type: 'simple',
     path: '@repo/components',
     importName: 'Input',
@@ -175,6 +176,31 @@ export const componentConfigs = {
     //     description: 'Disables the input',
     //   }
     // ],
+  },
+  alert: {
+    id: 'alert',
+    name: 'Alert',
+    type: 'simple',
+    path: '@repo/components',
+    importName: 'Alert',
+    variantsConfig: alertVariants,
+    variantsConfigRaw: alertVariantsConfig,
+    additionalProps: [
+      {
+        name: 'title',
+        type: 'text',
+        defaultValue: 'Alert Title',
+        placeholder: 'Title text',
+        description: 'The title of the alert',
+      },
+      {
+        name: 'description',
+        type: 'text',
+        defaultValue: 'Alert description goes here.',
+        placeholder: 'Description text',
+        description: 'The description of the alert',
+      },
+    ],
   },
 
 
