@@ -34,3 +34,22 @@ export {
 } from './ui/tooltip/index.js';
 export { Input } from "./ui/input/index.js"
 export { Alert, AlertTitle, AlertDescription, AlertAction } from './ui/alert/index.js';
+
+// Badge
+export {
+  Badge,
+  BadgeDemo,
+  badgeVariants,
+} from './ui/badge/index.js';
+
+// Card
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardDemo,
+} from './ui/card/index.js';
+

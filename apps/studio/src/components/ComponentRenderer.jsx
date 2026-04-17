@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
 import {
+  Badge,
   Button,
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
   Dialog,
   DialogTrigger,
   DialogContent,
@@ -39,7 +46,7 @@ export function ComponentRenderer({ componentId }) {
     if (!config) return;
 
     let extractedProps = [];
-    
+
     // For simple components with CVA variants
     if (config.variantsConfigRaw) {
       extractedProps = extractPropsFromVariants(config.variantsConfigRaw);
@@ -64,13 +71,13 @@ export function ComponentRenderer({ componentId }) {
     const defaults = getDefaultProps(extractedProps);
     setPropValues(defaults);
     setCustomClassName(''); // Reset custom class on component change
-    
+
     updateGeneratedCode(defaults, '');
   }, [componentId, config]);
 
   const updateGeneratedCode = (values, customClass = customClassName) => {
     if (!config) return;
-    
+
     const code = generateComponentCode(
       componentId,
       config.name,
@@ -78,7 +85,7 @@ export function ComponentRenderer({ componentId }) {
       config.variantsConfig,
       customClass
     );
-    
+
     setGeneratedCode(code);
   };
 
@@ -87,7 +94,7 @@ export function ComponentRenderer({ componentId }) {
       ...propValues,
       [propName]: value,
     };
-    
+
     setPropValues(newValues);
     updateGeneratedCode(newValues);
   };
@@ -108,7 +115,7 @@ export function ComponentRenderer({ componentId }) {
   // Render component based on type and ID
   const renderComponent = () => {
     const { children, className: _, ...restProps } = propValues;
-    
+
     switch (componentId) {
       case 'button':
         return (
@@ -116,10 +123,10 @@ export function ComponentRenderer({ componentId }) {
             {children || 'Button'}
           </Button>
         );
-      
+
       case 'dialog':
         return <DialogDemo propValues={propValues} customClassName={customClassName} />;
-      
+
       case 'dropdown-menu':
         return (
           <DropdownMenu>
@@ -139,7 +146,7 @@ export function ComponentRenderer({ componentId }) {
             </DropdownMenuContent>
           </DropdownMenu>
         );
-      
+
       case 'tooltip':
         return (
           <Tooltip>
@@ -153,12 +160,12 @@ export function ComponentRenderer({ componentId }) {
             </TooltipContent>
           </Tooltip>
         );
-       case 'input':
+      case 'input':
         return (
-            <Input
-              {...restProps}
-              className={customClassName || ''}
-            />
+          <Input
+            {...restProps}
+            className={customClassName || ''}
+          />
         );
       case 'alert':
         return (
@@ -170,7 +177,40 @@ export function ComponentRenderer({ componentId }) {
           </Alert>
         );
 
-      
+      case 'badge':
+        return (
+          <Badge {...restProps} className={customClassName || ''}>
+            {children || 'Badge'}
+          </Badge>
+        );
+
+      case 'card':
+        return (
+          <div className="max-w-sm">
+            <Card className={customClassName || ''}>
+              <CardHeader>
+                <CardTitle>
+                  {propValues.title || 'Card Title'}
+                </CardTitle>
+                <CardDescription>
+                  {propValues.description || 'Card description goes here.'}
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent>
+                {propValues.content || 'This is the main content area.'}
+              </CardContent>
+
+              <CardFooter>
+                <Button>
+                  {propValues.footerText || 'Action'}
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+        );
+
+
       default:
         return (
           <div className="text-sm text-muted-foreground">
