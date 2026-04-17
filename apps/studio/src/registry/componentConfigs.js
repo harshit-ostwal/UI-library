@@ -202,6 +202,39 @@ export const componentConfigs = {
       },
     ],
   },
+  radio: {
+    id: 'radio',
+    name: 'Radio Group',
+    type: 'compound',
+    path: '@repo/components',
+    importName: 'RadioGroup',
+    description: 'A set of mutually exclusive options where only one can be selected',
+
+    demoProps: [
+      {
+        name: 'defaultValue',
+        type: 'text',
+        defaultValue: 'option1',
+        description: 'Default selected value',
+      },
+      {
+        name: 'options',
+        type: 'array',
+        defaultValue: [
+          { label: 'Option 1', value: 'option1' },
+          { label: 'Option 2', value: 'option2' },
+          { label: 'Option 3', value: 'option3' },
+        ],
+        description: 'Radio options',
+      },
+      {
+        name: 'disabled',
+        type: 'boolean',
+        defaultValue: false,
+        description: 'Disable all options',
+      },
+    ],
+  }
 
 
 };
