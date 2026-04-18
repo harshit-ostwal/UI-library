@@ -19,6 +19,7 @@ export {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
+  DropdownMenuCheckboxItem,
   DropdownMenuGroup,
   DropdownMenuPortal,
   DropdownMenuSub,
@@ -37,6 +38,17 @@ export { Alert, AlertTitle, AlertDescription, AlertAction } from './ui/alert/ind
 export { RadioGroup, RadioGroupItem, RadioItem, RadioDemo } from "./ui/radio-group/index.js"
 export { Label } from './ui/label/index.js';
 export { Separator } from './ui/separator/index.js';
+export { DataTable } from './ui/data-table/index.js';
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from './ui/table/index.js';
 export {
   Field,
   FieldContent,
