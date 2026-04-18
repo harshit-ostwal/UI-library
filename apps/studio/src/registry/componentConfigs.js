@@ -154,28 +154,28 @@ export const componentConfigs = {
     type: 'simple',
     path: '@repo/components',
     importName: 'Input',
-    // additionalProps: [
-    //   {
-    //     name: 'type',
-    //     type: 'select',
-    //     options: ['text', 'email', 'password', 'number', 'tel', 'url', 'search'],
-    //     defaultValue: 'text',
-    //     description: 'HTML input type',
-    //   },
-    //   {
-    //     name: 'placeholder',
-    //     type: 'text',
-    //     defaultValue: 'bhai Enter text ...',
-    //     placeholder: 'Placeholder text',
-    //     description: 'Placeholder text shown when empty',
-    //   },
-    //   {
-    //     name: 'disabled',
-    //     type: 'boolean',
-    //     defaultValue: false,
-    //     description: 'Disables the input',
-    //   }
-    // ],
+    additionalProps: [
+      {
+        name: 'type',
+        type: 'select',
+        options: ['text', 'email', 'password', 'number', 'tel', 'url', 'search'],
+        defaultValue: 'text',
+        description: 'HTML input type',
+      },
+      {
+        name: 'placeholder',
+        type: 'text',
+        defaultValue: 'Enter text ...',
+        placeholder: 'Placeholder text',
+        description: 'Placeholder text shown when empty',
+      },
+        {
+          name: 'disabled',
+          type: 'boolean',
+          defaultValue: false,
+          description: 'Disables the input',
+        }
+    ],
   },
   alert: {
     id: 'alert',
