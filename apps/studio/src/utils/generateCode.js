@@ -110,6 +110,31 @@ export function generateJSXCode(componentId, componentName, propValues, customCl
 ${optionsMarkup}
 </RadioGroup>`;
 
+    case 'field':
+      const fieldOrientation = propValues.orientation || 'vertical';
+      const fieldLegendVariant = propValues.legendVariant || 'legend';
+      const fieldShowDescription = propValues.showDescription !== false;
+      const fieldShowError = Boolean(propValues.showError);
+      const fieldClassProp = customClassName ? ` className="${customClassName}"` : '';
+      return `<FieldSet>
+  <FieldLegend variant="${fieldLegendVariant}">${propValues.legendText || 'Profile Details'}</FieldLegend>
+  <FieldGroup>
+    <Field orientation="${fieldOrientation}"${fieldShowError ? ' data-invalid' : ''}${fieldClassProp}>
+      <FieldLabel>
+        <FieldTitle>${propValues.labelText || 'Email Address'}</FieldTitle>
+      </FieldLabel>
+      <FieldContent>
+        <div data-slot="field-control" className="rounded-md border border-dashed border-input bg-muted/30 px-3 py-2 text-sm text-muted-foreground">
+          ${propValues.controlText || 'Attach your form control here'}
+        </div>
+${fieldShowDescription ? `        <FieldDescription>${propValues.descriptionText || 'We will only use this for product updates.'}</FieldDescription>` : ''}
+${fieldShowError ? `        <FieldError errors={[{ message: "${propValues.errorMessage || 'Please enter a valid email address.'}" }]} />` : ''}
+      </FieldContent>
+    </Field>
+    <FieldSeparator>${propValues.separatorText || 'Optional'}</FieldSeparator>
+  </FieldGroup>
+</FieldSet>`;
+
     case 'button':
     default:
       // Simple component with props

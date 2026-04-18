@@ -22,7 +22,17 @@ import {
   AlertTitle,
   AlertDescription,
   RadioGroup,
-  RadioGroupItem
+  RadioGroupItem,
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldError,
+  FieldGroup,
+  FieldLabel,
+  FieldLegend,
+  FieldSeparator,
+  FieldSet,
+  FieldTitle,
 } from '@repo/components';
 import { extractPropsFromVariants, getDefaultProps } from '../utils/extractComponentProps.js';
 import { generateComponentCode } from '../utils/generateCode.js';
@@ -210,6 +220,8 @@ export function ComponentRenderer({ componentId }) {
           </RadioGroup>
         );
 
+      case 'field':
+        return <FieldDemoPreview propValues={propValues} customClassName={customClassName} />;
 
       default:
         return (
@@ -237,6 +249,54 @@ export function ComponentRenderer({ componentId }) {
         onCustomClassChange={handleCustomClassChange}
       />
     </>
+  );
+}
+
+function FieldDemoPreview({ propValues, customClassName }) {
+  const showDescription = propValues.showDescription !== false;
+  const showError = Boolean(propValues.showError);
+  const legendVariant = propValues.legendVariant || 'legend';
+  const orientation = propValues.orientation || 'vertical';
+  const errorMessage = propValues.errorMessage || 'Please enter a valid email address.';
+
+  return (
+    <div className="w-full max-w-xl space-y-5">
+      <FieldSet>
+        <FieldLegend variant={legendVariant}>{propValues.legendText || 'Profile Details'}</FieldLegend>
+        <FieldGroup>
+          <Field orientation={orientation} data-invalid={showError || undefined} className={customClassName || ''}>
+            <FieldLabel>
+              <FieldTitle>{propValues.labelText || 'Email Address'}</FieldTitle>
+            </FieldLabel>
+            <FieldContent>
+              <div
+                data-slot="field-control"
+                className="rounded-md border border-dashed border-input bg-muted/30 px-3 py-2 text-sm text-muted-foreground"
+              >
+                {propValues.controlText || 'Attach your form control here'}
+              </div>
+              {showDescription && (
+                <FieldDescription>{propValues.descriptionText || 'We will only use this for product updates.'}</FieldDescription>
+              )}
+              {showError && <FieldError errors={[{ message: errorMessage }]} />}
+            </FieldContent>
+          </Field>
+
+          <FieldSeparator>{propValues.separatorText || 'Optional'}</FieldSeparator>
+        </FieldGroup>
+      </FieldSet>
+
+      <div className="rounded-md border border-border bg-card p-3 text-xs">
+        <div className="mb-2 font-medium">Libraries and config used</div>
+        <ul className="space-y-1 text-muted-foreground">
+          <li>react: useMemo in FieldError for unique error rendering</li>
+          <li>class-variance-authority: fieldVariants (orientation)</li>
+          <li>@repo/utils: cn class merge helper</li>
+          <li>@repo/components/ui/label + separator primitives</li>
+          <li>Tailwind utility selectors for slot/state styling</li>
+        </ul>
+      </div>
+    </div>
   );
 }
 
