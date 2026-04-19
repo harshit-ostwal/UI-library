@@ -14,3 +14,4 @@ export { renderField } from './field.jsx';
 export { renderTable } from './table.jsx';
 export { renderDataTable } from './data-table.jsx';
 export { renderSwitch } from './switch.jsx';
+export { renderSeparator } from './separator.jsx';

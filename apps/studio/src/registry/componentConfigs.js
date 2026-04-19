@@ -67,6 +67,10 @@ export const componentConfigs = {
     id: 'switch',
     name: 'Switch',
   },
+  separator: {
+    id: 'separator',
+    name: 'Separator',
+  },
 };
 
 export const componentList = Object.values(componentConfigs);
