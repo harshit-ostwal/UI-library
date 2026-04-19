@@ -33,7 +33,7 @@ export {
   TooltipProvider,
   TooltipDemo,
 } from './ui/tooltip/index.js';
-export { Input } from "./ui/input/index.js"
+export { Input} from './ui/input/index.js';
 export { Alert, AlertTitle, AlertDescription, AlertAction } from './ui/alert/index.js';
 export { Tabs, TabsList, TabsTrigger, TabsContent, TabsDemo } from './ui/tabs/index.js';
 export { RadioGroup, RadioGroupItem, RadioItem, RadioDemo } from "./ui/radio-group/index.js"
@@ -65,3 +65,5 @@ export {
   fieldVariants,
   fieldVariantsConfig,
 } from './ui/field/index.js';
+export { Toaster } from './ui/sonner/index.js';
+ 
