@@ -4,29 +4,46 @@ import { cn } from '@repo/utils';
 import { buttonVariants } from './button.styles.js';
 
 export const Button = React.forwardRef(
-  ({ 
-    className, 
-    variant, 
-    size, 
-    asChild = false,
-    disabled = false,
-    type = 'button',
-    onClick,
-    children,
-    ...props 
-  }, ref) => {
+  (
+    {
+      className,
+      variant = 'default',
+      size = 'default',
+      asChild = false,
+      type = 'button',
+      disabled = false,
+      isLoading = false,
+      leftIcon,
+      rightIcon,
+      fullWidth,
+      children,
+      ...props
+    },
+    ref
+  ) => {
     const Comp = asChild ? Slot : 'button';
-    
+
     return (
+      
       <Comp
-        className={cn(buttonVariants({ variant, size }), className)}
         ref={ref}
-        type={!asChild ? type : undefined}
-        disabled={!asChild ? disabled : undefined}
-        onClick={onClick}
+        className={cn(buttonVariants({ variant, size, fullWidth }), className)}
+        {...(!asChild && {
+          type,
+          disabled: disabled || isLoading,
+        })}
+        aria-disabled={disabled || isLoading}
         {...props}
       >
-        {children}
+        {isLoading ? (
+          'Loading...'
+        ) : (
+          <>
+            {leftIcon && <span className="mr-2">{leftIcon}</span>}
+            {children}
+            {rightIcon && <span className="ml-2">{rightIcon}</span>}
+          </>
+        )}
       </Comp>
     );
   }

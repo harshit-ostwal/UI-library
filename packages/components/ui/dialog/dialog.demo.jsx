@@ -1,81 +1,88 @@
 import React from 'react';
 import {
   Dialog,
+  DialogTrigger,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  DialogDescription,
   DialogFooter,
+  DialogClose,
 } from './dialog.jsx';
+
 import { Button } from '../button/button.jsx';
 
 export function DialogDemo() {
   return (
-    <div className="space-y-4">
-      <div>
-        <h3 className="text-lg font-semibold mb-4">Basic Dialog</h3>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button variant="outline">Open Dialog</Button>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Are you absolutely sure?</DialogTitle>
-              <DialogDescription>
-                This action cannot be undone. This will permanently delete your account
-                and remove your data from our servers.
-              </DialogDescription>
-            </DialogHeader>
-            <DialogFooter>
-              <Button variant="outline">Cancel</Button>
-              <Button variant="destructive">Delete Account</Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      </div>
+    <div className="space-y-6">
 
-      <div>
-        <h3 className="text-lg font-semibold mb-4">Custom Styled Dialog</h3>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button>Open Custom Dialog</Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle>Edit profile</DialogTitle>
-              <DialogDescription>
-                Make changes to your profile here. Click save when you're done.
-              </DialogDescription>
-            </DialogHeader>
-            <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4">
-                <label htmlFor="name" className="text-right text-sm font-medium">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  defaultValue="Pedro Duarte"
-                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                />
-              </div>
-              <div className="grid grid-cols-4 items-center gap-4">
-                <label htmlFor="username" className="text-right text-sm font-medium">
-                  Username
-                </label>
-                <input
-                  id="username"
-                  defaultValue="@peduarte"
-                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                />
-              </div>
-            </div>
-            <DialogFooter>
-              <Button type="submit">Save changes</Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      </div>
+      {/* Default */}
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button>Open Dialog</Button>
+        </DialogTrigger>
+
+        <DialogContent size="md">
+          <DialogHeader>
+            <DialogTitle>Delete Account</DialogTitle>
+            <DialogDescription>
+              This action cannot be undone.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="py-4 text-sm text-muted-foreground">
+            Are you sure you want to delete your account?
+          </div>
+
+          <DialogFooter>
+            <DialogClose asChild>
+              <Button variant="outline">Cancel</Button>
+            </DialogClose>
+
+            <DialogClose asChild>
+              <Button variant="destructive">Delete</Button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* Large Dialog */}
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button variant="secondary">Large Dialog</Button>
+        </DialogTrigger>
+
+        <DialogContent size="lg">
+          <DialogHeader>
+            <DialogTitle>Large Modal</DialogTitle>
+            <DialogDescription>
+              This is a bigger dialog
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="py-6">
+            <p>More content goes here...</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Fullscreen */}
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button variant="outline">Fullscreen</Button>
+        </DialogTrigger>
+
+        <DialogContent size="full">
+          <DialogHeader>
+            <DialogTitle>Fullscreen Dialog</DialogTitle>
+          </DialogHeader>
+
+          <div className="mt-6">
+            <p>This is fullscreen modal</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+
     </div>
   );
 }

@@ -1,38 +1,81 @@
 import React from 'react';
 import { Button } from './button.jsx';
 
+// 🔥 reusable config (DRY approach)
+const VARIANTS = ['default', 'secondary', 'destructive', 'outline', 'ghost', 'link'];
+const SIZES = ['sm', 'default', 'lg', 'icon'];
+
 export function ButtonDemo() {
   return (
-    <div className="space-y-8">
-      <div>
-        <h3 className="text-lg font-semibold mb-4">Variants</h3>
+    <div className="space-y-10">
+
+      {/* Variants */}
+      <Section title="Variants">
         <div className="flex flex-wrap gap-4">
-          <Button variant="default">Default</Button>
-          <Button variant="secondary">Secondary</Button>
-          <Button variant="destructive">Destructive</Button>
-          <Button variant="outline">Outline</Button>
-          <Button variant="ghost">Ghost</Button>
-          <Button variant="link">Link</Button>
+          {VARIANTS.map((variant) => (
+            <Button key={variant} variant={variant}>
+              {variant}
+            </Button>
+          ))}
         </div>
-      </div>
+      </Section>
 
-      <div>
-        <h3 className="text-lg font-semibold mb-4">Sizes</h3>
+      {/* Sizes */}
+      <Section title="Sizes">
         <div className="flex flex-wrap items-center gap-4">
-          <Button size="sm">Small</Button>
-          <Button size="default">Default</Button>
-          <Button size="lg">Large</Button>
-          <Button size="icon">🚀</Button>
+          {SIZES.map((size) => (
+            <Button key={size} size={size}>
+              {size === 'icon' ? '🚀' : size}
+            </Button>
+          ))}
         </div>
-      </div>
+      </Section>
 
-      <div>
-        <h3 className="text-lg font-semibold mb-4">States</h3>
+      {/* States */}
+      <Section title="States">
         <div className="flex flex-wrap gap-4">
           <Button>Normal</Button>
           <Button disabled>Disabled</Button>
+          <Button isLoading>Loading</Button>
         </div>
-      </div>
+      </Section>
+
+      {/* Icons */}
+      <Section title="With Icons">
+        <div className="flex flex-wrap gap-4">
+          <Button leftIcon="🔥">Left</Button>
+          <Button rightIcon="➡️">Right</Button>
+          <Button leftIcon="🚀" rightIcon="✨">Both</Button>
+        </div>
+      </Section>
+
+      {/* Full Width */}
+      <Section title="Full Width">
+        <div className="space-y-3 max-w-md">
+          <Button fullWidth>Full Width</Button>
+          <Button variant="secondary" fullWidth>
+            Secondary
+          </Button>
+        </div>
+      </Section>
+
+      {/* AsChild */}
+      <Section title="As Child">
+        <Button asChild>
+          <a href="#">Go to Page</a>
+        </Button>
+      </Section>
+
     </div>
+  );
+}
+
+// 🔥 reusable section component (clean UI structure)
+function Section({ title, children }) {
+  return (
+    <section>
+      <h3 className="text-lg font-semibold mb-4">{title}</h3>
+      {children}
+    </section>
   );
 }

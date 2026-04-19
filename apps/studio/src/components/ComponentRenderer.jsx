@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from "react";
 import { ArrowUpDown, MoreHorizontal } from 'lucide-react';
 import {
   Badge,
@@ -10,6 +10,7 @@ import {
   CardContent,
   CardFooter,
   Dialog,
+  DialogClose,
   DialogTrigger,
   DialogContent,
   DialogHeader,
@@ -25,10 +26,6 @@ import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
-  Input,
-  Alert,
-  AlertTitle,
-  AlertDescription,
   Tabs,
   TabsList,
   TabsTrigger,
@@ -54,26 +51,35 @@ import {
   TableCell,
   TableCaption,
   DataTable,
-} from '@repo/components';
+  Alert,
+  AlertTitle,
+  AlertDescription,
+  Input,
+} from "@repo/components";
 import { toast } from 'sonner';
-import { extractPropsFromVariants, getDefaultProps } from '../utils/extractComponentProps.js';
-import { generateComponentCode } from '../utils/generateCode.js';
-import { componentConfigs } from '../registry/componentConfigs.js';
-import { PreviewCanvas } from './PreviewCanvas.jsx';
-import { PropertiesPanel } from './PropertiesPanel.jsx';
+import {
+  extractPropsFromVariants,
+  getDefaultProps,
+} from "../utils/extractComponentProps.js";
+import { generateComponentCode } from "../utils/generateCode.js";
+import { componentConfigs } from "../registry/componentConfigs.js";
+import { PreviewCanvas } from "./PreviewCanvas.jsx";
+import { PropertiesPanel } from "./PropertiesPanel.jsx";
 
 export function ComponentRenderer({ componentId }) {
   const config = componentConfigs[componentId];
   const [propValues, setPropValues] = useState({});
   const [propsConfig, setPropsConfig] = useState([]);
-  const [generatedCode, setGeneratedCode] = useState({ jsxCode: "", cssClasses: "" });
+  const [generatedCode, setGeneratedCode] = useState({
+    jsxCode: "",
+    cssClasses: "",
+  });
   const [customClassName, setCustomClassName] = useState("");
 
   useEffect(() => {
     if (!config) return;
 
     let extractedProps = [];
-
 
     // For simple components with CVA variants
     if (config.variantsConfigRaw) {
@@ -109,7 +115,13 @@ export function ComponentRenderer({ componentId }) {
   const updateGeneratedCode = (values, customClass = customClassName) => {
     if (!config) return;
 
-    const code = generateComponentCode(componentId, config.name, values, config.variantsConfig, customClass);
+    const code = generateComponentCode(
+      componentId,
+      config.name,
+      values,
+      config.variantsConfig,
+      customClass,
+    );
 
     setGeneratedCode(code);
   };
@@ -119,7 +131,6 @@ export function ComponentRenderer({ componentId }) {
       ...propValues,
       [propName]: value,
     };
-
 
     setPropValues(newValues);
     updateGeneratedCode(newValues);
@@ -140,20 +151,35 @@ export function ComponentRenderer({ componentId }) {
 
   // Render component based on type and ID
   const renderComponent = () => {
-    const { children, className: _, ...restProps } = propValues;
+    const { children, className: _, fullWidth, asChild, isLoading, leftIcon, rightIcon, ...restProps } = propValues;
+
 
     switch (componentId) {
       case "button":
+      case "button":
         return (
-          <Button {...restProps} className={customClassName || ""}>
-            {children || "Button"}
+          <Button
+            {...restProps}
+            fullWidth={fullWidth}
+            asChild={asChild}
+            isLoading={isLoading}
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
+            className={customClassName || ""}
+          >
+            {isLoading ? "Loading..." : children || "Button"}
           </Button>
         );
 
-      case 'dialog':
-        return <DialogDemo propValues={propValues} customClassName={customClassName} />;
+      case "dialog":
+        return (
+          <DialogDemo
+            propValues={propValues}
+            customClassName={customClassName}
+          />
+        );
 
-      case 'dropdown-menu':
+      case "dropdown-menu":
         return (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -173,11 +199,12 @@ export function ComponentRenderer({ componentId }) {
           </DropdownMenu>
         );
 
-      case 'tooltip':
+      case "tooltip":
         return (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button variant="outline" className={customClassName}>
+                {propValues.triggerText || "Hover me"}
                 {propValues.triggerText || "Hover me"}
               </Button>
             </TooltipTrigger>
@@ -552,11 +579,13 @@ function DialogDemo({ propValues, customClassName }) {
       <DialogTrigger asChild>
         <Button className={customClassName}>{propValues.triggerText || "Open Dialog"}</Button>
       </DialogTrigger>
-      <DialogContent>
+
+      <DialogContent size={propValues.size || "md"}>
         <DialogHeader>
           <DialogTitle>{propValues.title || "Dialog Title"}</DialogTitle>
           <DialogDescription>{propValues.description || "Dialog description goes here."}</DialogDescription>
         </DialogHeader>
+
         <div className="py-4">
           <p className="text-sm text-muted-foreground">
             {propValues.bodyText || "This is the dialog body content. You can add any content here."}
