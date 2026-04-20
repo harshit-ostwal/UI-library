@@ -15,3 +15,7 @@ export { renderTable } from './table.jsx';
 export { renderDataTable } from './data-table.jsx';
 export { renderSwitch } from './switch.jsx';
 export { renderSeparator } from './separator.jsx';
+export {renderKbd} from './kbd.jsx';
+export {renderLabel} from './label.jsx';
+export {renderItem} from './item.jsx';
+export {renderMenubar} from './menubar.jsx';

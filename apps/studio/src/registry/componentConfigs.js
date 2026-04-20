@@ -71,6 +71,22 @@ export const componentConfigs = {
     id: 'separator',
     name: 'Separator',
   },
+  kbd: {
+    id: 'kbd',
+    name: 'Kbd',
+  },
+  label: {
+    id: 'label',
+    name: 'Label',
+  },
+  item: {
+    id: 'item',
+    name: 'Item',
+  },
+  menubar: {
+    id: 'menubar',
+    name: 'Menubar',
+  }
 };
 
 export const componentList = Object.values(componentConfigs);

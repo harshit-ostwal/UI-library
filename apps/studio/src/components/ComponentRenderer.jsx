@@ -1,11 +1,11 @@
 import * as Components from "@repo/components";
 import { PreviewCanvas } from "./PreviewCanvas.jsx";
 import { componentConfigs } from "../registry/componentConfigs.js";
-import { 
-  renderButton, 
+import {
+  renderButton,
   renderDialog,
   renderDrawer,
-  renderDropdownMenu, 
+  renderDropdownMenu,
   renderTooltip,
   renderInput,
   renderAlert,
@@ -18,7 +18,11 @@ import {
   renderTable,
   renderDataTable,
   renderSwitch,
-  renderSeparator
+  renderSeparator,
+  renderKbd,
+  renderLabel,
+  renderItem,
+  renderMenubar,
 } from "./renderers/index.jsx";
 
 export function ComponentRenderer({ componentId }) {
@@ -51,10 +55,14 @@ export function ComponentRenderer({ componentId }) {
       "data-table": renderDataTable,
       switch: renderSwitch,
       separator: renderSeparator,
+      kbd: renderKbd,
+      label: renderLabel,
+      item: renderItem,
+      menubar: renderMenubar,
     };
 
     const renderer = renderers[componentId];
-    
+
     if (!renderer) {
       return <div className="text-sm text-muted-foreground">Component preview not implemented</div>;
     }

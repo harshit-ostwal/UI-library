@@ -102,3 +102,18 @@ export { Toaster } from './ui/sonner.jsx';
 
 // Data Table
 export { DataTable } from './ui/data-table.jsx';
+
+// Kbd
+export { Kbd } from './ui/kbd.jsx';
+
+// Item
+export { Item } from './ui/item.jsx';
+
+// Menubar
+export {
+  Menubar,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+} from './ui/menubar.jsx';
