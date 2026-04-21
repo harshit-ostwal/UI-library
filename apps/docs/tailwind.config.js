@@ -6,6 +6,8 @@ export default {
   content: [
     './app/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
-    '../../packages/components/**/*.{js,jsx}',
+    '../../packages/components/index.js',
+    '../../packages/components/lib/**/*.{js,jsx}',
+    '../../packages/components/ui/**/*.{js,jsx}',
   ],
 };
