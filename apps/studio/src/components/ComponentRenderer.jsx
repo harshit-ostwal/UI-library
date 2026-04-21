@@ -18,7 +18,8 @@ import {
   renderTable,
   renderDataTable,
   renderSwitch,
-  renderSeparator
+  renderSeparator,
+  renderCombobox,
 } from "./renderers/index.jsx";
 
 export function ComponentRenderer({ componentId }) {
@@ -51,6 +52,7 @@ export function ComponentRenderer({ componentId }) {
       "data-table": renderDataTable,
       switch: renderSwitch,
       separator: renderSeparator,
+      combobox: renderCombobox,
     };
 
     const renderer = renderers[componentId];

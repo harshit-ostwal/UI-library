@@ -102,3 +102,17 @@ export { Toaster } from './ui/sonner.jsx';
 
 // Data Table
 export { DataTable } from './ui/data-table.jsx';
+
+// Combobox
+export {
+  Combobox,
+  ComboboxTrigger,
+  ComboboxContent,
+  ComboboxSearch,
+  ComboboxList,
+  ComboboxItem,
+  ComboboxEmpty,
+  ComboboxGroup,
+  ComboboxLabel,
+  ComboboxSeparator,
+} from './ui/combobox.jsx';

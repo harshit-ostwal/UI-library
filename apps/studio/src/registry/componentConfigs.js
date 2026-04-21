@@ -24,52 +24,56 @@ export const componentConfigs = {
     name: "Tooltip",
   },
   input: {
-    id: 'input',
-    name: 'Input',
+    id: "input",
+    name: "Input",
   },
   alert: {
-    id: 'alert',
-    name: 'Alert',
+    id: "alert",
+    name: "Alert",
   },
   tabs: {
-    id: 'tabs',
-    name: 'Tabs',
+    id: "tabs",
+    name: "Tabs",
   },
   radio: {
-    id: 'radio',
-    name: 'Radio Group',
+    id: "radio",
+    name: "Radio Group",
   },
   table: {
-    id: 'table',
-    name: 'Table',
+    id: "table",
+    name: "Table",
   },
-  'data-table': {
-    id: 'data-table',
-    name: 'Data Table',
+  "data-table": {
+    id: "data-table",
+    name: "Data Table",
   },
   field: {
-    id: 'field',
-    name: 'Field',
+    id: "field",
+    name: "Field",
   },
   sonner: {
-    id: 'sonner',
-    name: 'Sonner',
+    id: "sonner",
+    name: "Sonner",
   },
   badge: {
-    id: 'badge',
-    name: 'Badge',
+    id: "badge",
+    name: "Badge",
   },
   card: {
-    id: 'card',
-    name: 'Card',
+    id: "card",
+    name: "Card",
   },
   switch: {
-    id: 'switch',
-    name: 'Switch',
+    id: "switch",
+    name: "Switch",
   },
   separator: {
-    id: 'separator',
-    name: 'Separator',
+    id: "separator",
+    name: "Separator",
+  },
+  combobox: {
+    id: "combobox",
+    name: "Combobox",
   },
 };
 
