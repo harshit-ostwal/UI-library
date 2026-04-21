@@ -74,6 +74,10 @@ export const componentConfigs = {
   avatar:{
     id:'avatar',
     name:'avatar'
+  },
+  select:{
+    id:'select',
+    name:'select'
   }
 };
 

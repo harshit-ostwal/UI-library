@@ -16,3 +16,4 @@ export { renderDataTable } from './data-table.jsx';
 export { renderSwitch } from './switch.jsx';
 export { renderSeparator } from './separator.jsx';
 export {renderAvatar} from './avatar.jsx'
+export {renderSelect} from './select.jsx'

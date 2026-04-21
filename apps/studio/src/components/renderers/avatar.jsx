@@ -5,7 +5,7 @@ export function renderAvatar(
 ) {
   return (
     <div className={`flex flex-row flex-wrap items-center gap-6 md:gap-12 ${customClassName}`}>
-      {/* 1. Basic Avatar with custom grayscale filter */}
+      
       <Avatar>
         <AvatarImage
           src="https://github.com/shadcn.png"
@@ -15,7 +15,7 @@ export function renderAvatar(
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
 
-      {/* 2. Avatar with Status Badge */}
+      
       <Avatar>
         <AvatarImage
           src="https://github.com/evilrabbit.png"

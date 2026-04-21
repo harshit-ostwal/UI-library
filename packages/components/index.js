@@ -112,3 +112,17 @@ export {
   AvatarGroup,
   AvatarGroupCount,
 } from './ui/avatar.jsx';
+
+// select 
+export {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from './ui/select.jsx'

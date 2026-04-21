@@ -19,7 +19,8 @@ import {
   renderDataTable,
   renderSwitch,
   renderSeparator,
-  renderAvatar
+  renderAvatar,
+  renderSelect
 } from "./renderers/index.jsx";
 
 export function ComponentRenderer({ componentId }) {
@@ -53,6 +54,7 @@ export function ComponentRenderer({ componentId }) {
       switch: renderSwitch,
       separator: renderSeparator,
       avatar : renderAvatar,
+      select : renderSelect,
     };
 
     const renderer = renderers[componentId];
