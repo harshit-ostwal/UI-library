@@ -71,6 +71,10 @@ export const componentConfigs = {
     id: 'separator',
     name: 'Separator',
   },
+  avatar:{
+    id:'avatar',
+    name:'avatar'
+  }
 };
 
 export const componentList = Object.values(componentConfigs);

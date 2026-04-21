@@ -102,3 +102,13 @@ export { Toaster } from './ui/sonner.jsx';
 
 // Data Table
 export { DataTable } from './ui/data-table.jsx';
+
+// Avatar 
+export {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+  AvatarBadge,
+  AvatarGroup,
+  AvatarGroupCount,
+} from './ui/avatar.jsx';
