@@ -122,3 +122,7 @@ export {
 
 // Skeleton
 export * from './ui/skeleton.jsx';
+//scroll-area 
+
+export { ScrollArea, ScrollBar } from './ui/scroll-area.jsx'
+

@@ -24,7 +24,9 @@ import {
   renderItem,
   renderMenubar,
   renderSkeleton,
+  renderScrollArea
 } from "./renderers/index.jsx";
+
 
 export function ComponentRenderer({ componentId }) {
   const config = componentConfigs[componentId];
@@ -61,6 +63,7 @@ export function ComponentRenderer({ componentId }) {
       item: renderItem,
       menubar: renderMenubar,
       skeleton: renderSkeleton,
+      "scroll-area":renderScrollArea,
     };
 
     const renderer = renderers[componentId];
