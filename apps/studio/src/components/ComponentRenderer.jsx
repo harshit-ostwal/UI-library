@@ -25,7 +25,10 @@ import {
   renderMenubar,
   renderSkeleton,
   renderScrollArea,
-  renderHoverCard
+  renderHoverCard,
+ renderButtonGroup,
+ renderEmpty,
+ renderCollapsible
 } from "./renderers/index.jsx";
 
 
@@ -66,6 +69,9 @@ export function ComponentRenderer({ componentId }) {
       skeleton: renderSkeleton,
       "scroll-area":renderScrollArea,
       "hover-card": renderHoverCard,
+      buttongroup:renderButtonGroup,
+      empty:renderEmpty,
+      collapsible:renderCollapsible,
     };
 
     const renderer = renderers[componentId];

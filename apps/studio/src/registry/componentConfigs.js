@@ -101,6 +101,18 @@ export const componentConfigs = {
     id: 'hover-card',
     name: 'Hover Card',
   },
+  buttongroup: {
+    id: 'buttongroup',
+    name: 'ButtonGroup',
+  },
+  empty:{
+    id:'empty',
+    name:'Empty',
+  },
+  collapsible:{
+    id:'collapsible',
+    name:'Collapsible'
+  }
 };
 
 export const componentList = Object.values(componentConfigs);
