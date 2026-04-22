@@ -25,3 +25,4 @@ export { renderHoverCard } from './hoverCard.jsx';
 export {renderButtonGroup} from "./buttongroup.jsx"
 export {renderEmpty}  from "./empty.jsx"
 export {renderCollapsible} from "./collapsible.jsx"
+export { renderCombobox } from "./combobox.jsx";

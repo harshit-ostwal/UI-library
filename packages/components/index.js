@@ -149,3 +149,16 @@ export { Collapsible,
     CollapsibleContent,
     CollapsibleTrigger,
     CollapsibleWithLogic} from "./ui/collapsible.jsx"
+// Combobox
+export {
+  Combobox,
+  ComboboxTrigger,
+  ComboboxContent,
+  ComboboxSearch,
+  ComboboxList,
+  ComboboxItem,
+  ComboboxEmpty,
+  ComboboxGroup,
+  ComboboxLabel,
+  ComboboxSeparator,
+} from './ui/combobox.jsx';

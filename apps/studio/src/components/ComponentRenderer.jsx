@@ -28,7 +28,8 @@ import {
   renderHoverCard,
  renderButtonGroup,
  renderEmpty,
- renderCollapsible
+ renderCollapsible,
+  renderCombobox,
 } from "./renderers/index.jsx";
 
 
@@ -72,6 +73,7 @@ export function ComponentRenderer({ componentId }) {
       buttongroup:renderButtonGroup,
       empty:renderEmpty,
       collapsible:renderCollapsible,
+      combobox: renderCombobox,
     };
 
     const renderer = renderers[componentId];
