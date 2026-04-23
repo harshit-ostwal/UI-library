@@ -20,7 +20,8 @@ import {
   renderSwitch,
   renderSeparator,
   renderAvatar,
-  renderSelect
+  renderSelect,
+  renderToggle
 } from "./renderers/index.jsx";
 
 export function ComponentRenderer({ componentId }) {
@@ -55,6 +56,7 @@ export function ComponentRenderer({ componentId }) {
       separator: renderSeparator,
       avatar : renderAvatar,
       select : renderSelect,
+      toggle : renderToggle,
     };
 
     const renderer = renderers[componentId];

@@ -77,7 +77,11 @@ export const componentConfigs = {
   },
   select:{
     id:'select',
-    name:'select'
+    name:'Select'
+  },
+  toggle:{
+    id:'toggle',
+    name:'Toggle'
   }
 };
 

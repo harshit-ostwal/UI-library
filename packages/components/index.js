@@ -126,3 +126,10 @@ export {
   SelectTrigger,
   SelectValue,
 } from './ui/select.jsx'
+
+export { 
+  Toggle, 
+  ToggleGroup, 
+  ToggleGroupItem, 
+  toggleVariants 
+} from './ui/toggle.jsx';
