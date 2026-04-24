@@ -2,7 +2,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'UI Component Library - Documentation',
-  description: 'Documentation for our React UI component library',
+  description: 'Documentation for our React UI component library. The YouI',
 };
 
 export default function RootLayout({ children }) {

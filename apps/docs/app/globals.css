@@ -8,9 +8,28 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+/* Brand (static) */
+:root {
+  --primary: rgb(59, 130, 246);
+  --primary-hover: rgb(37, 99, 235);
+  --primary-foreground: rgb(255, 255, 255);
+}
+
+/* 🌙 Dark */
+[data-theme="dark"] {
+  --background: rgb(11, 15, 20);
+  --foreground: rgb(230, 237, 243);
+}
+
+/* ☀️ Light */
+[data-theme="light"] {
+  --background: rgb(255, 255, 255);
+  --foreground: rgb(17, 24, 39);
 }

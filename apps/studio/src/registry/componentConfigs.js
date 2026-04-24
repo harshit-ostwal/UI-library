@@ -1,3 +1,5 @@
+import { ScrollArea } from "@radix-ui/react-scroll-area";
+
 /**
  * Simplified Component Registry
  * Just stores component metadata for navigation and display
@@ -28,53 +30,97 @@ export const componentConfigs = {
     name: "Tooltip",
   },
   input: {
-    id: 'input',
-    name: 'Input',
+    id: "input",
+    name: "Input",
   },
   alert: {
-    id: 'alert',
-    name: 'Alert',
+    id: "alert",
+    name: "Alert",
   },
   tabs: {
-    id: 'tabs',
-    name: 'Tabs',
+    id: "tabs",
+    name: "Tabs",
   },
   radio: {
-    id: 'radio',
-    name: 'Radio Group',
+    id: "radio",
+    name: "Radio Group",
   },
   table: {
-    id: 'table',
-    name: 'Table',
+    id: "table",
+    name: "Table",
   },
-  'data-table': {
-    id: 'data-table',
-    name: 'Data Table',
+  "data-table": {
+    id: "data-table",
+    name: "Data Table",
   },
   field: {
-    id: 'field',
-    name: 'Field',
+    id: "field",
+    name: "Field",
   },
   sonner: {
-    id: 'sonner',
-    name: 'Sonner',
+    id: "sonner",
+    name: "Sonner",
   },
   badge: {
-    id: 'badge',
-    name: 'Badge',
+    id: "badge",
+    name: "Badge",
   },
   card: {
-    id: 'card',
-    name: 'Card',
+    id: "card",
+    name: "Card",
   },
   switch: {
-    id: 'switch',
-    name: 'Switch',
+    id: "switch",
+    name: "Switch",
   },
   separator: {
-    id: 'separator',
-    name: 'Separator',
+    id: "separator",
+    name: "Separator",
   },
+  combobox: {
+    id: "combobox",
+    name: "Combobox",
+  },
+  kbd: {
+    id: 'kbd',
+    name: 'Kbd',
+  },
+  label: {
+    id: 'label',
+    name: 'Label',
+  },
+  item: {
+    id: 'item',
+    name: 'Item',
+  },
+  menubar: {
+    id: 'menubar',
+    name: 'Menubar',
+  },
+  skeleton: {
+  id: "skeleton",
+  name: "Skeleton",
+},
+  'scroll-area': {
+    id: 'scroll-area',
+    name: 'Scroll Area',
+  },
+  'hover-card': {
+    id: 'hover-card',
+    name: 'Hover Card',
+  },
+  buttongroup: {
+    id: 'buttongroup',
+    name: 'ButtonGroup',
+  },
+  empty:{
+    id:'empty',
+    name:'Empty',
+  },
+  collapsible:{
+    id:'collapsible',
+    name:'Collapsible'
+  }
 };
 
 export const componentList = Object.values(componentConfigs);
