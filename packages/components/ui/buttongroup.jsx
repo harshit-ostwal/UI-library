@@ -1,16 +1,9 @@
-import React, { useState, useRef, useEffect } from "react"
-import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
-import { cn } from '@repo/utils';
+"use client";
 
-const DropdownMenu = DropdownMenuPrimitive.Root;
-const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
-const DropdownMenuGroup = DropdownMenuPrimitive.Group;
-const DropdownMenuPortal = DropdownMenuPrimitive.Portal;
-const DropdownMenuSub = DropdownMenuPrimitive.Sub;
-const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
+import React, { useState, useRef, useEffect } from "react";
 
 export function ButtonGroup({ children }) {
-  return <div className="flex items-center gap-1">{children}</div>
+  return <div className="flex items-center gap-1">{children}</div>;
 }
 
 export function Button({ children, className = "", ...props }) {
@@ -21,23 +14,23 @@ export function Button({ children, className = "", ...props }) {
     >
       {children}
     </button>
-  )
+  );
 }
 
 export function Dropdown({ children }) {
-  const [open, setOpen] = useState(false)
-  const ref = useRef()
+  const [open, setOpen] = useState(false);
+  const ref = useRef();
 
   // close on outside click
   useEffect(() => {
     function handleClick(e) {
       if (ref.current && !ref.current.contains(e.target)) {
-        setOpen(false)
+        setOpen(false);
       }
     }
-    document.addEventListener("click", handleClick)
-    return () => document.removeEventListener("click", handleClick)
-  }, [])
+    document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
+  }, []);
 
   return (
     <div ref={ref} className="relative">
@@ -45,7 +38,7 @@ export function Dropdown({ children }) {
         React.cloneElement(child, { open, setOpen })
       )}
     </div>
-  )
+  );
 }
 
 export function DropdownTrigger({ children, setOpen }) {
@@ -56,21 +49,20 @@ export function DropdownTrigger({ children, setOpen }) {
     >
       {children}
     </button>
-  )
+  );
 }
 
 export function DropdownContent({ children, open }) {
-  if (!open) return null
+  if (!open) return null;
 
   return (
     <div className="absolute right-0 mt-2 w-40 bg-white border shadow rounded">
       {children}
     </div>
-  )
+  );
 }
 
 export function DropdownItem({ children, setOpen }) {
-    
   return (
     <div
       onClick={() => setOpen(false)}
@@ -78,5 +70,5 @@ export function DropdownItem({ children, setOpen }) {
     >
       {children}
     </div>
-  )
+  );
 }

@@ -1,5 +1,7 @@
-import { Toaster as Sonner } from "sonner"
-import { CheckCircle2, Info, Loader2Icon, AlertTriangleIcon, AlertOctagonIcon } from "lucide-react"
+"use client";
+
+import { Toaster as Sonner } from "sonner";
+import { CheckCircle2, Info, Loader2Icon, AlertTriangleIcon, AlertOctagonIcon } from "lucide-react";
 
 const Toaster = ({ ...props }) => {
 
