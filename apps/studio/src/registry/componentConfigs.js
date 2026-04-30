@@ -21,6 +21,10 @@ export const componentConfigs = {
     id: "dropdown-menu",
     name: "Dropdown Menu",
   },
+  "context-menu": {
+    id: "context-menu",
+    name: "Context Menu",
+  },
   tooltip: {
     id: "tooltip",
     name: "Tooltip",
@@ -116,6 +120,42 @@ export const componentConfigs = {
   collapsible:{
     id:'collapsible',
     name:'Collapsible'
+  },
+  accordion: {
+    id: "accordion",
+    name: "Accordion",
+  },
+  avatar: {
+    id: "avatar",
+    name: "Avatar",
+  },
+  calendar: {
+    id: "calendar",
+    name: "Calendar",
+  },
+  breadcrumb: {
+    id: "breadcrumb",
+    name: "Breadcrumb",
+  },
+  carousel: {
+    id: "carousel",
+    name: "Carousel",
+  },
+  "navigation-menu": {
+    id: "navigation-menu",
+    name: "Navigation Menu",
+  },
+  pagination: {
+    id: "pagination",
+    name: "Pagination",
+  },
+  sheet: {
+    id: "sheet",
+    name: "Sheet",
+  },
+  resizable: {
+    id: "resizable",
+    name: "Resizable",
   }
 };
 

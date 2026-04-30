@@ -5,7 +5,8 @@ import {
   renderButton,
   renderDialog,
   renderDrawer,
-  renderDropdownMenu,
+  renderDropdownMenu, 
+  renderContextMenu,
   renderTooltip,
   renderInput,
   renderAlert,
@@ -28,8 +29,17 @@ import {
   renderHoverCard,
  renderButtonGroup,
  renderEmpty,
- renderCollapsible,
+  renderCollapsible,
   renderCombobox,
+  renderAccordion,
+  renderAvatar,
+  renderCalendar,
+  renderBreadcrumb,
+  renderCarousel,
+  renderNavigationMenu,
+  renderPagination,
+  renderSheet,
+  renderResizable,
 } from "./renderers/index.jsx";
 
 
@@ -50,6 +60,7 @@ export function ComponentRenderer({ componentId }) {
       dialog: renderDialog,
       drawer: renderDrawer,
       "dropdown-menu": renderDropdownMenu,
+      "context-menu": renderContextMenu,
       tooltip: renderTooltip,
       input: renderInput,
       alert: renderAlert,
@@ -74,6 +85,15 @@ export function ComponentRenderer({ componentId }) {
       empty:renderEmpty,
       collapsible:renderCollapsible,
       combobox: renderCombobox,
+      accordion: renderAccordion,
+      avatar: renderAvatar,
+      calendar: renderCalendar,
+      breadcrumb: renderBreadcrumb,
+      carousel: renderCarousel,
+      "navigation-menu": renderNavigationMenu,
+      pagination: renderPagination,
+      sheet: renderSheet,
+      resizable: renderResizable,
     };
 
     const renderer = renderers[componentId];
