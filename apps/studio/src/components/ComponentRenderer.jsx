@@ -31,6 +31,7 @@ import {
     renderMenubar,
     renderNavigationMenu,
     renderPagination,
+    renderPopover,
     renderProgress,
     renderRadio,
     renderResizable,
@@ -39,6 +40,7 @@ import {
     renderSheet,
     renderSkeleton,
     renderSonner,
+    renderSpinner,
     renderSwitch,
     renderTable,
     renderTabs,
@@ -83,7 +85,7 @@ export function ComponentRenderer({ componentId }) {
             skeleton: renderSkeleton,
             "scroll-area": renderScrollArea,
             "hover-card": renderHoverCard,
-            "button-group": renderButtonGroup,
+            buttongroup: renderButtonGroup,
             empty: renderEmpty,
             collapsible: renderCollapsible,
             combobox: renderCombobox,
@@ -99,6 +101,8 @@ export function ComponentRenderer({ componentId }) {
             progress: renderProgress,
             image: renderImage,
             headings: renderHeadings,
+            popover: renderPopover,
+            spinner: renderSpinner,
         };
 
         const renderer = renderers[componentId];

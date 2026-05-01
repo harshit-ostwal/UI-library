@@ -135,12 +135,12 @@ export { RadioGroup, RadioGroupItem } from "./ui/radio-group.jsx";
 
 // Separator
 export { Separator } from "./ui/separator.jsx";
-
 // Skeleton
 export * from "./ui/skeleton.jsx";
-
 // Sonner
 export { Toaster } from "./ui/sonner.jsx";
+// Spinner
+export { Spinner } from "./ui/spinner.jsx";
 
 // Switch
 export { Switch } from "./ui/switch.jsx";
@@ -277,6 +277,17 @@ export {
     PaginationNext,
     PaginationPrevious,
 } from "./ui/pagination.jsx";
+
+// Popover
+export {
+    Popover,
+    PopoverAnchor,
+    PopoverContent,
+    PopoverDescription,
+    PopoverHeader,
+    PopoverTitle,
+    PopoverTrigger,
+} from "./ui/popover.jsx";
 
 // Progress
 export { Progress } from "./ui/progress.jsx";

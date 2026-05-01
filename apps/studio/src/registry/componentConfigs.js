@@ -121,6 +121,10 @@ export const componentConfigs = {
         id: "pagination",
         name: "Pagination",
     },
+    popover: {
+        id: "popover",
+        name: "Popover",
+    },
     progress: {
         id: "progress",
         name: "Progress",
@@ -156,6 +160,10 @@ export const componentConfigs = {
     switch: {
         id: "switch",
         name: "Switch",
+    },
+    spinner: {
+        id: "spinner",
+        name: "Spinner",
     },
     table: {
         id: "table",
