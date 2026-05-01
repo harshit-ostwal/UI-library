@@ -173,6 +173,10 @@ export const componentConfigs = {
         id: "tabs",
         name: "Tabs",
     },
+    textarea: {
+        id: "textarea",
+        name: "Textarea",
+    },
     tooltip: {
         id: "tooltip",
         name: "Tooltip",

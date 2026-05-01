@@ -40,4 +40,5 @@ export { renderSpinner } from "./spinner.jsx";
 export { renderSwitch } from "./switch.jsx";
 export { renderTable } from "./table.jsx";
 export { renderTabs } from "./tabs.jsx";
+export { renderTextarea } from "./textarea.jsx";
 export { renderTooltip } from "./tooltip.jsx";

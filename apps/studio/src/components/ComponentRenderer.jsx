@@ -42,6 +42,7 @@ import {
     renderSonner,
     renderSpinner,
     renderSwitch,
+    renderTextarea,
     renderTable,
     renderTabs,
     renderTooltip,
@@ -103,6 +104,7 @@ export function ComponentRenderer({ componentId }) {
             headings: renderHeadings,
             popover: renderPopover,
             spinner: renderSpinner,
+            textarea: renderTextarea,
         };
 
         const renderer = renderers[componentId];

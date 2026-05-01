@@ -145,6 +145,9 @@ export { Spinner } from "./ui/spinner.jsx";
 // Switch
 export { Switch } from "./ui/switch.jsx";
 
+// Textarea
+export { Textarea } from "./ui/text-area.jsx";
+
 // Table
 export {
     Table,
