@@ -1,5 +1,6 @@
 export { renderAccordion } from "./accordion.jsx";
 export { renderAlert } from "./alert.jsx";
+export { renderAspectRatio } from "./aspect-ratio.jsx";
 export { renderAvatar } from "./avatar.jsx";
 export { renderBadge } from "./badge.jsx";
 export { renderBreadcrumb } from "./breadcrumb.jsx";
@@ -41,4 +42,5 @@ export { renderSwitch } from "./switch.jsx";
 export { renderTable } from "./table.jsx";
 export { renderTabs } from "./tabs.jsx";
 export { renderTextarea } from "./textarea.jsx";
+export { renderToggle } from "./toggle.jsx";
 export { renderTooltip } from "./tooltip.jsx";

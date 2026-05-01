@@ -4,6 +4,7 @@ import { PreviewCanvas } from "./PreviewCanvas.jsx";
 import {
     renderAccordion,
     renderAlert,
+    renderAspectRatio,
     renderAvatar,
     renderBadge,
     renderBreadcrumb,
@@ -42,9 +43,10 @@ import {
     renderSonner,
     renderSpinner,
     renderSwitch,
-    renderTextarea,
     renderTable,
     renderTabs,
+    renderTextarea,
+    renderToggle,
     renderTooltip,
 } from "./renderers/index.jsx";
 
@@ -103,6 +105,8 @@ export function ComponentRenderer({ componentId }) {
             image: renderImage,
             headings: renderHeadings,
             popover: renderPopover,
+            "aspect-ratio": renderAspectRatio,
+            toggle: renderToggle,
             spinner: renderSpinner,
             textarea: renderTextarea,
         };

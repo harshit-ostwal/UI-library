@@ -5,6 +5,10 @@ import { ScrollArea } from "@radix-ui/react-scroll-area";
  * Just stores component metadata for navigation and display
  */
 export const componentConfigs = {
+    "aspect-ratio": {
+        id: "aspect-ratio",
+        name: "Aspect Ratio",
+    },
     accordion: {
         id: "accordion",
         name: "Accordion",
@@ -180,6 +184,10 @@ export const componentConfigs = {
     tooltip: {
         id: "tooltip",
         name: "Tooltip",
+    },
+    toggle: {
+        id: "toggle",
+        name: "Toggle",
     },
 };
 
