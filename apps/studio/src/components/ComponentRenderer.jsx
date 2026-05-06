@@ -118,7 +118,7 @@ export function ComponentRenderer({ componentId }) {
             spinner: renderSpinner,
             textarea: renderTextarea,
             chart:renderChart,
-            inputgroup:renderInputGroup
+            inputgroup:renderInputGroup,
           "input-otp": renderInputOtp,
             direction : renderDirection,
       aspectRatio: renderAspectRatio,

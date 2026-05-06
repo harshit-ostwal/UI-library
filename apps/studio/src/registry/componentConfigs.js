@@ -204,7 +204,7 @@ export const componentConfigs = {
     inputgroup:{
         id:"inputgroup",
         name:"InputGroup"
-    }
+    },
   "input-otp": {
     id: "input-otp",
     name: "Input OTP"
