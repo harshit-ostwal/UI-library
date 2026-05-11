@@ -1,15 +1,14 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import {
-    DocsHeading,
-    DocsDescription,
-} from "../../../components/docs/docs-heading";
 import { Heading } from "@repo/components";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import {
+    DocsDescription,
+    DocsHeading,
+} from "../../../components/docs/docs-heading";
 
 export const metadata = {
     title: "Components - UI Library",
-    description:
-        "Browse all the components available in the library.",
+    description: "Browse all the components available in the library.",
 };
 
 const components = [
@@ -44,7 +43,8 @@ const components = [
     {
         name: "Drawer",
         slug: "drawer",
-        description: "A drawer component that slides in from the edge of the screen.",
+        description:
+            "A drawer component that slides in from the edge of the screen.",
     },
     {
         name: "Dropdown Menu",
@@ -55,7 +55,8 @@ const components = [
     {
         name: "Image",
         slug: "image",
-        description: "An image component with support for fallback and various fit modes.",
+        description:
+            "An image component with support for fallback and various fit modes.",
     },
     {
         name: "Popover",

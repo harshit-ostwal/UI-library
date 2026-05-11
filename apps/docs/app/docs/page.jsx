@@ -1,4 +1,10 @@
-import { ArrowRight, Paintbrush, Accessibility, Copy, Puzzle } from "lucide-react";
+import {
+    Accessibility,
+    ArrowRight,
+    Copy,
+    Paintbrush,
+    Puzzle,
+} from "lucide-react";
 import Link from "next/link";
 import {
     DocsDescription,
@@ -27,8 +33,8 @@ export default function DocsPage() {
                 <p className="text-muted-foreground">
                     This is a collection of reusable React components that you
                     can copy and paste into your projects. Each component is
-                    fully customizable, follows best practices for accessibility,
-                    and is built on top of{" "}
+                    fully customizable, follows best practices for
+                    accessibility, and is built on top of{" "}
                     <a
                         href="https://www.radix-ui.com"
                         target="_blank"
@@ -59,7 +65,8 @@ export default function DocsPage() {
                             <span className="font-medium">Copy & Paste</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            No package to install. Just copy the component source into your project and own it fully.
+                            No package to install. Just copy the component
+                            source into your project and own it fully.
                         </p>
                     </div>
                     <div className="rounded-lg border border-border bg-card p-5">
@@ -68,7 +75,8 @@ export default function DocsPage() {
                             <span className="font-medium">Accessible</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Built on Radix UI primitives, every component meets WAI-ARIA standards out of the box.
+                            Built on Radix UI primitives, every component meets
+                            WAI-ARIA standards out of the box.
                         </p>
                     </div>
                     <div className="rounded-lg border border-border bg-card p-5">
@@ -77,7 +85,8 @@ export default function DocsPage() {
                             <span className="font-medium">Themeable</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Styled with Tailwind CSS and CSS variables so you can adapt every component to your design system.
+                            Styled with Tailwind CSS and CSS variables so you
+                            can adapt every component to your design system.
                         </p>
                     </div>
                     <div className="rounded-lg border border-border bg-card p-5">
@@ -86,7 +95,8 @@ export default function DocsPage() {
                             <span className="font-medium">Composable</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Small, focused primitives that compose together. Use only what you need and leave the rest.
+                            Small, focused primitives that compose together. Use
+                            only what you need and leave the rest.
                         </p>
                     </div>
                 </div>
@@ -96,21 +106,33 @@ export default function DocsPage() {
                 <DocsHeading level={2}>FAQ</DocsHeading>
                 <div className="space-y-6 mt-4">
                     <div>
-                        <h3 className="font-medium mb-1">Can I use this in a commercial project?</h3>
+                        <h3 className="font-medium mb-1">
+                            Can I use this in a commercial project?
+                        </h3>
                         <p className="text-sm text-muted-foreground">
-                            Yes. The components are MIT licensed. You can use them in personal and commercial projects without attribution.
+                            Yes. The components are MIT licensed. You can use
+                            them in personal and commercial projects without
+                            attribution.
                         </p>
                     </div>
                     <div>
-                        <h3 className="font-medium mb-1">Do I need to install any additional packages?</h3>
+                        <h3 className="font-medium mb-1">
+                            Do I need to install any additional packages?
+                        </h3>
                         <p className="text-sm text-muted-foreground">
-                            Each component lists its own peer dependencies. You'll typically need the relevant Radix UI package and Tailwind CSS configured in your project.
+                            Each component lists its own peer dependencies.
+                            You'll typically need the relevant Radix UI package
+                            and Tailwind CSS configured in your project.
                         </p>
                     </div>
                     <div>
-                        <h3 className="font-medium mb-1">Can I contribute new components?</h3>
+                        <h3 className="font-medium mb-1">
+                            Can I contribute new components?
+                        </h3>
                         <p className="text-sm text-muted-foreground">
-                            Contributions are welcome. Open an issue to discuss a new component idea or submit a pull request directly on GitHub.
+                            Contributions are welcome. Open an issue to discuss
+                            a new component idea or submit a pull request
+                            directly on GitHub.
                         </p>
                     </div>
                 </div>

@@ -1,7 +1,15 @@
 import { Button } from "@repo/components";
-import { ArrowRight, Box, Code, Layers, Palette, Sparkles, Zap } from "lucide-react";
-import Link from "next/link";
 import { ComponentShowcase } from "components/home/ComponentShowcase";
+import {
+    ArrowRight,
+    Box,
+    Code,
+    Layers,
+    Palette,
+    Sparkles,
+    Zap,
+} from "lucide-react";
+import Link from "next/link";
 
 const features = [
     {
@@ -120,7 +128,8 @@ export default function HomePage() {
                         Ready to build?
                     </h2>
                     <p className="mb-8 text-lg text-muted-foreground">
-                        Browse the components, copy the code, and ship something great.
+                        Browse the components, copy the code, and ship something
+                        great.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link href="/docs">

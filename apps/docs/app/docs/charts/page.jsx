@@ -1,7 +1,7 @@
 import { BarChart2 } from "lucide-react";
 import {
-    DocsHeading,
     DocsDescription,
+    DocsHeading,
 } from "../../../components/docs/docs-heading";
 
 export const metadata = {
@@ -33,16 +33,21 @@ export default function ChartsPage() {
                     </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 mt-2">
-                    {["Area Chart", "Bar Chart", "Line Chart", "Pie Chart", "Radial Chart", "Scatter Plot"].map(
-                        (tag) => (
-                            <span
-                                key={tag}
-                                className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
-                            >
-                                {tag}
-                            </span>
-                        )
-                    )}
+                    {[
+                        "Area Chart",
+                        "Bar Chart",
+                        "Line Chart",
+                        "Pie Chart",
+                        "Radial Chart",
+                        "Scatter Plot",
+                    ].map((tag) => (
+                        <span
+                            key={tag}
+                            className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
+                        >
+                            {tag}
+                        </span>
+                    ))}
                 </div>
             </div>
         </div>

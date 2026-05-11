@@ -1,12 +1,13 @@
 import { FolderSearch } from "lucide-react";
 import {
-    DocsHeading,
     DocsDescription,
+    DocsHeading,
 } from "../../../components/docs/docs-heading";
 
 export const metadata = {
     title: "Directory - UI Library",
-    description: "A searchable directory of all components and blocks. Coming soon.",
+    description:
+        "A searchable directory of all components and blocks. Coming soon.",
 };
 
 export default function DirectoryPage() {
@@ -33,16 +34,20 @@ export default function DirectoryPage() {
                     </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 mt-2">
-                    {["Search", "Filter by Category", "Tag Browsing", "Preview Thumbnails", "Sorting"].map(
-                        (tag) => (
-                            <span
-                                key={tag}
-                                className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
-                            >
-                                {tag}
-                            </span>
-                        )
-                    )}
+                    {[
+                        "Search",
+                        "Filter by Category",
+                        "Tag Browsing",
+                        "Preview Thumbnails",
+                        "Sorting",
+                    ].map((tag) => (
+                        <span
+                            key={tag}
+                            className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
+                        >
+                            {tag}
+                        </span>
+                    ))}
                 </div>
             </div>
         </div>

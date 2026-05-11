@@ -1,12 +1,13 @@
 import { Wand2 } from "lucide-react";
 import {
-    DocsHeading,
     DocsDescription,
+    DocsHeading,
 } from "../../../components/docs/docs-heading";
 
 export const metadata = {
     title: "Create - UI Library",
-    description: "Generate and scaffold new components with the CLI. Coming soon.",
+    description:
+        "Generate and scaffold new components with the CLI. Coming soon.",
 };
 
 export default function CreatePage() {
@@ -33,16 +34,20 @@ export default function CreatePage() {
                     </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 mt-2">
-                    {["CLI Scaffolding", "Component Generator", "Theme Picker", "Copy to Clipboard", "Framework Detection"].map(
-                        (tag) => (
-                            <span
-                                key={tag}
-                                className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
-                            >
-                                {tag}
-                            </span>
-                        )
-                    )}
+                    {[
+                        "CLI Scaffolding",
+                        "Component Generator",
+                        "Theme Picker",
+                        "Copy to Clipboard",
+                        "Framework Detection",
+                    ].map((tag) => (
+                        <span
+                            key={tag}
+                            className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
+                        >
+                            {tag}
+                        </span>
+                    ))}
                 </div>
             </div>
         </div>

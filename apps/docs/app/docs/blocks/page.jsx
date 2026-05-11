@@ -1,7 +1,7 @@
 import { Blocks } from "lucide-react";
 import {
-    DocsHeading,
     DocsDescription,
+    DocsHeading,
 } from "../../../components/docs/docs-heading";
 
 export const metadata = {
@@ -33,16 +33,21 @@ export default function BlocksPage() {
                     </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 mt-2">
-                    {["Hero Section", "Feature Grid", "Pricing Table", "CTA Banner", "Testimonials", "Footer"].map(
-                        (tag) => (
-                            <span
-                                key={tag}
-                                className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
-                            >
-                                {tag}
-                            </span>
-                        )
-                    )}
+                    {[
+                        "Hero Section",
+                        "Feature Grid",
+                        "Pricing Table",
+                        "CTA Banner",
+                        "Testimonials",
+                        "Footer",
+                    ].map((tag) => (
+                        <span
+                            key={tag}
+                            className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
+                        >
+                            {tag}
+                        </span>
+                    ))}
                 </div>
             </div>
         </div>
