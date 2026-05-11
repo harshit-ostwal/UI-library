@@ -389,25 +389,13 @@ export const componentConfigs = {
         id: "toggle",
         name: "Toggle",
     },
-    chart: {
-        id: "chart",
-        name: "Chart",
+    inputotp: {
+        id: "inputotp",
+        name: "InputOTP",
     },
     inputgroup: {
         id: "inputgroup",
         name: "InputGroup",
-    },
-    "input-otp": {
-        id: "input-otp",
-        name: "Input OTP",
-    },
-    direction: {
-        id: "direction",
-        name: "Direction",
-    },
-    aspectRatio: {
-        id: "aspectRatio",
-        name: "Aspect Ratio",
     },
 };
 
