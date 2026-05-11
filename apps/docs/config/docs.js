@@ -77,6 +77,18 @@ export const docsConfig = {
                     title: "Breadcrumb",
                     href: "/docs/breadcrumb",
                 },
+                {
+                    title: "Accordion",
+                    href: "/docs/accordion",
+                },
+                {
+                    title: "Alert",
+                    href: "/docs/alert",
+                },
+                {
+                    title: "Avatar",
+                    href: "/docs/avatar",
+                },
             ],
         },
     ],
