@@ -31,7 +31,9 @@ export default function DropdownMenuWithSubmenu() {
                     </DropdownMenuSubContent>
                 </DropdownMenuSub>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
+                <DropdownMenuItem variant="destructive">
+                    Delete
+                </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     );

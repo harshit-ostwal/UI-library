@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
     Button,
     DropdownMenu,
@@ -11,6 +10,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@repo/components";
+import { useState } from "react";
 
 export default function DropdownMenuRadio() {
     const [theme, setTheme] = useState("system");
