@@ -13,12 +13,14 @@ import {
     renderCalendar,
     renderCard,
     renderCarousel,
+    renderChart,
     renderCheckbox,
     renderCollapsible,
     renderCombobox,
     renderContextMenu,
     renderDataTable,
     renderDialog,
+    renderDirection,
     renderDrawer,
     renderDropdownMenu,
     renderEmpty,
@@ -27,6 +29,8 @@ import {
     renderHoverCard,
     renderImage,
     renderInput,
+    renderInputGroup,
+    renderInputOtp,
     renderItem,
     renderKbd,
     renderLabel,
@@ -117,12 +121,12 @@ export function ComponentRenderer({ componentId }) {
             toggle: renderToggle,
             spinner: renderSpinner,
             textarea: renderTextarea,
-            chart:renderChart,
-            inputgroup:renderInputGroup,
-          "input-otp": renderInputOtp,
-            direction : renderDirection,
-      aspectRatio: renderAspectRatio,
-    };
+            chart: renderChart,
+            inputgroup: renderInputGroup,
+            "input-otp": renderInputOtp,
+            direction: renderDirection,
+            aspectRatio: renderAspectRatio,
+        };
 
         const renderer = renderers[componentId];
 
