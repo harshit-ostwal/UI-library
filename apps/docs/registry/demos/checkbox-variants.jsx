@@ -16,26 +16,54 @@ export default function CheckboxVariants() {
                     <p className="text-sm font-medium">{label}</p>
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
-                            <Checkbox variant={variant} id={`${variant}-unchecked`} />
-                            <Label htmlFor={`${variant}-unchecked`} className="text-sm">
+                            <Checkbox
+                                variant={variant}
+                                id={`${variant}-unchecked`}
+                            />
+                            <Label
+                                htmlFor={`${variant}-unchecked`}
+                                className="text-sm"
+                            >
                                 Unchecked
                             </Label>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Checkbox variant={variant} id={`${variant}-checked`} defaultChecked />
-                            <Label htmlFor={`${variant}-checked`} className="text-sm">
+                            <Checkbox
+                                variant={variant}
+                                id={`${variant}-checked`}
+                                defaultChecked
+                            />
+                            <Label
+                                htmlFor={`${variant}-checked`}
+                                className="text-sm"
+                            >
                                 Checked
                             </Label>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Checkbox variant={variant} id={`${variant}-disabled`} disabled />
-                            <Label htmlFor={`${variant}-disabled`} className="text-sm text-muted-foreground">
+                            <Checkbox
+                                variant={variant}
+                                id={`${variant}-disabled`}
+                                disabled
+                            />
+                            <Label
+                                htmlFor={`${variant}-disabled`}
+                                className="text-sm text-muted-foreground"
+                            >
                                 Disabled
                             </Label>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Checkbox variant={variant} id={`${variant}-disabled-checked`} disabled defaultChecked />
-                            <Label htmlFor={`${variant}-disabled-checked`} className="text-sm text-muted-foreground">
+                            <Checkbox
+                                variant={variant}
+                                id={`${variant}-disabled-checked`}
+                                disabled
+                                defaultChecked
+                            />
+                            <Label
+                                htmlFor={`${variant}-disabled-checked`}
+                                className="text-sm text-muted-foreground"
+                            >
                                 Disabled checked
                             </Label>
                         </div>
