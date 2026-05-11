@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Progress, Separator } from "@repo/components";
+import { useEffect, useState } from "react";
 
 export default function ProgressVariants() {
     const [value, setValue] = useState(0);
