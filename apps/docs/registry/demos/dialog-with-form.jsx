@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
     Button,
     Dialog,
@@ -14,6 +13,7 @@ import {
     Input,
     Label,
 } from "@repo/components";
+import { useState } from "react";
 
 export default function DialogWithForm() {
     const [open, setOpen] = useState(false);
