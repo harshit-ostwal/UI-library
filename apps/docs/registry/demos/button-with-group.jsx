@@ -6,7 +6,7 @@ import {
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@repo/components";
+} from "@shery-ui/components";
 import {
     ArchiveIcon,
     ArrowLeftIcon,
