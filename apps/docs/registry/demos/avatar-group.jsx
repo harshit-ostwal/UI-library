@@ -4,7 +4,7 @@ import {
     AvatarGroup,
     AvatarGroupCount,
     AvatarImage,
-} from "@repo/components";
+} from "@shery-ui/components";
 
 export default function AvatarGroupDemo() {
     return (
