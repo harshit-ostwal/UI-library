@@ -156,7 +156,9 @@ export default function HomePage() {
                                 <code className="font-mono text-sm bg-muted px-1.5 py-0.5 rounded">
                                     shery-ui
                                 </code>{" "}
-                                CLI to scaffold your project and copy any component directly into your codebase — no lock-in.
+                                CLI to scaffold your project and copy any
+                                component directly into your codebase — no
+                                lock-in.
                             </p>
                             <div className="flex gap-3">
                                 <Link href="/docs/cli">
