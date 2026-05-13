@@ -1,5 +1,11 @@
-import { Button } from "@repo/components";
-import { ArrowRight } from "lucide-react";
+import {
+    Accessibility,
+    ArrowRight,
+    Copy,
+    Paintbrush,
+    Puzzle,
+    Terminal,
+} from "lucide-react";
 import Link from "next/link";
 import {
     DocsDescription,
@@ -13,45 +19,207 @@ export const metadata = {
 };
 
 export default function DocsPage() {
+    const components = [
+        {
+            title: "Button",
+            href: "/docs/button",
+            description:
+                "Displays a button or a component that looks like a button.",
+        },
+        {
+            title: "Sidebar",
+            href: "/docs/sidebar",
+            description: "A sidebar component for building navigation layouts.",
+        },
+        {
+            title: "Accordion",
+            href: "/docs/accordion",
+            description: "A vertically stacked set of interactive headings.",
+        },
+        {
+            title: "Alert",
+            href: "/docs/alert",
+            description:
+                "Displays a callout for important user-facing messages.",
+        },
+        {
+            title: "Avatar",
+            href: "/docs/avatar",
+            description: "An image element with fallback and group support.",
+        },
+    ];
+
     return (
         <div className="container max-w-4xl mx-auto py-10 px-4">
             <div className="mb-12">
-                <DocsHeading level={1}>Documentation</DocsHeading>
+                <DocsHeading level={1}>Introduction</DocsHeading>
                 <DocsDescription>
                     Beautiful and accessible React components built with Radix
                     UI and Tailwind CSS.
                 </DocsDescription>
+                <Link
+                    href="/docs/cli"
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground mt-4"
+                >
+                    <Terminal className="w-3.5 h-3.5" />
+                    New —{" "}
+                    <code className="font-mono font-semibold text-foreground">
+                        shery-ui
+                    </code>{" "}
+                    CLI is here
+                    <ArrowRight className="w-3 h-3" />
+                </Link>
             </div>
 
-            <section className="mb-16">
-                <DocsHeading level={2}>Getting Started</DocsHeading>
-                <p className="text-muted-foreground mb-6">
-                    Browse our collection of reusable components. Each component
-                    is fully customizable and follows best practices for
-                    accessibility and performance.
+            <section className="mb-12">
+                <DocsHeading level={2}>What is this?</DocsHeading>
+                <p className="text-muted-foreground">
+                    This is a collection of reusable React components that you
+                    can copy and paste into your projects. Each component is
+                    fully customizable, follows best practices for
+                    accessibility, and is built on top of{" "}
+                    <a
+                        href="https://www.radix-ui.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-4 hover:text-foreground"
+                    >
+                        Radix UI
+                    </a>{" "}
+                    primitives and styled with{" "}
+                    <a
+                        href="https://tailwindcss.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-4 hover:text-foreground"
+                    >
+                        Tailwind CSS
+                    </a>
+                    .
                 </p>
             </section>
 
             <section className="mb-16">
                 <DocsHeading level={2}>Components</DocsHeading>
                 <div className="grid gap-4 sm:grid-cols-2 mt-6">
-                    <Link
-                        href="/docs/button"
-                        className="group relative rounded-lg border border-border bg-card p-6 hover:bg-accent/50 transition-colors"
-                    >
-                        <h3 className="font-semibold text-lg mb-2 group-hover:text-foreground">
-                            Button
-                        </h3>
-                        <p className="text-sm text-muted-foreground mb-4">
-                            Displays a button or a component that looks like a
-                            button.
-                        </p>
-                        <div className="flex items-center text-sm font-medium text-primary">
-                            View component
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </div>
-                    </Link>
+                    {components.map((component) => (
+                        <Link
+                            key={component.href}
+                            href={component.href}
+                            className="group relative rounded-lg border border-border bg-card p-6 hover:bg-accent/50 transition-colors"
+                        >
+                            <h3 className="font-semibold text-lg mb-2 group-hover:text-foreground">
+                                {component.title}
+                            </h3>
+                            <p className="text-sm text-muted-foreground mb-4">
+                                {component.description}
+                            </p>
+                            <div className="flex items-center text-sm font-medium text-primary">
+                                View component
+                                <ArrowRight className="ml-2 h-4 w-4" />
+                            </div>
+                        </Link>
+                    ))}
                 </div>
+            </section>
+
+            <section className="mb-12">
+                <DocsHeading level={2}>FAQ</DocsHeading>
+                <div className="space-y-6 mt-4">
+                    <div>
+                        <h3 className="font-medium mb-1">
+                            Can I use this in a commercial project?
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                            Yes. The components are MIT licensed. You can use
+                            them in personal and commercial projects without
+                            attribution.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-medium mb-1">
+                            Do I need to install any additional packages?
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                            Each component lists its own peer dependencies.
+                            You'll typically need the relevant Radix UI package
+                            and Tailwind CSS configured in your project.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-medium mb-1">
+                            Can I contribute new components?
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                            Contributions are welcome. Open an issue to discuss
+                            a new component idea or submit a pull request
+                            directly on GitHub.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="mb-12">
+                <DocsHeading level={2}>Browse Components</DocsHeading>
+                <p className="text-muted-foreground mb-6">
+                    Explore all available components in the library. Click the
+                    link below to see the full list with descriptions.
+                </p>
+                <Link
+                    href="/docs/components"
+                    className="group inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-4 text-sm font-medium transition-colors hover:bg-accent/50"
+                >
+                    View all components
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+            </section>
+
+            <section className="mb-12">
+                <DocsHeading level={2}>
+                    <Terminal className="inline-block w-5 h-5 mr-2 align-text-bottom" />
+                    CLI
+                </DocsHeading>
+                <p className="text-muted-foreground mb-6">
+                    Use the{" "}
+                    <code className="font-mono text-sm bg-muted px-1.5 py-0.5 rounded">
+                        shery-ui
+                    </code>{" "}
+                    CLI to initialize your project and add components with a
+                    single command — no manual file setup required.
+                </p>
+                <div className="space-y-3 font-mono text-sm mb-6">
+                    <div className="px-4 py-3 border rounded-lg border-border bg-muted/30 dark:bg-muted/10">
+                        <p className="mb-1 text-xs text-muted-foreground font-sans">
+                            Initialize your project
+                        </p>
+                        <code className="text-foreground">
+                            npx shery-ui@latest init
+                        </code>
+                    </div>
+                    <div className="px-4 py-3 border rounded-lg border-border bg-muted/30 dark:bg-muted/10">
+                        <p className="mb-1 text-xs text-muted-foreground font-sans">
+                            Add a component
+                        </p>
+                        <code className="text-foreground">
+                            npx shery-ui@latest add button
+                        </code>
+                    </div>
+                    <div className="px-4 py-3 border rounded-lg border-border bg-muted/30 dark:bg-muted/10">
+                        <p className="mb-1 text-xs text-muted-foreground font-sans">
+                            Interactive picker
+                        </p>
+                        <code className="text-foreground">
+                            npx shery-ui@latest add
+                        </code>
+                    </div>
+                </div>
+                <Link
+                    href="/docs/cli"
+                    className="group inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-4 text-sm font-medium transition-colors hover:bg-accent/50"
+                >
+                    View CLI documentation
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
             </section>
         </div>
     );

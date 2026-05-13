@@ -1,4 +1,4 @@
-import * as Components from "@repo/components";
+import * as Components from "@shery-ui/components";
 import { componentConfigs } from "../registry/componentConfigs.js";
 import { PreviewCanvas } from "./PreviewCanvas.jsx";
 import {
@@ -27,6 +27,8 @@ import {
     renderHoverCard,
     renderImage,
     renderInput,
+    renderInputGroup,
+    renderInputOTP,
     renderItem,
     renderKbd,
     renderLabel,
@@ -111,6 +113,8 @@ export function ComponentRenderer({ componentId }) {
             toggle: renderToggle,
             spinner: renderSpinner,
             textarea: renderTextarea,
+            inputotp: renderInputOTP,
+            inputgroup: renderInputGroup,
         };
 
         const renderer = renderers[componentId];
