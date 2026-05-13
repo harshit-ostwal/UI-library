@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, DataTable } from "@repo/components";
+import { Button, DataTable } from "@shery-ui/components";
 
 import { ArrowUpDown } from "lucide-react";
 import { useMemo } from "react";

@@ -1,6 +1,6 @@
 "use client";
 
-import { DataTable } from "@repo/components";
+import { DataTable } from "@shery-ui/components";
 import { useMemo } from "react";
 
 export default function DataTablePagination() {

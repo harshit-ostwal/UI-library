@@ -9,7 +9,7 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@repo/components";
+} from "@shery-ui/components";
 
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { useMemo } from "react";
