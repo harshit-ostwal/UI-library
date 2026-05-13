@@ -5,7 +5,7 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-} from "@repo/components";
+} from "@shery-ui/components";
 
 export default function NavigationMenuDemo() {
     return (

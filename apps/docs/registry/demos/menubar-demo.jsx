@@ -4,7 +4,7 @@ import {
     MenubarItem,
     MenubarMenu,
     MenubarTrigger,
-} from "@repo/components";
+} from "@shery-ui/components";
 
 export default function MenubarDemo() {
     return (
