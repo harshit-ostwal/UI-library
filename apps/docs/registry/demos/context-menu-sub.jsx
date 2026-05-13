@@ -6,7 +6,7 @@ import {
     ContextMenuSubContent,
     ContextMenuSubTrigger,
     ContextMenuTrigger,
-} from "@repo/components";
+} from "@shery-ui/components";
 
 export default function ContextMenuSubDemo() {
     return (

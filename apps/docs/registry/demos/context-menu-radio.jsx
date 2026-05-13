@@ -7,7 +7,7 @@ import {
     ContextMenuRadioItem,
     ContextMenuSeparator,
     ContextMenuTrigger,
-} from "@repo/components";
+} from "@shery-ui/components";
 
 import { useState } from "react";
 

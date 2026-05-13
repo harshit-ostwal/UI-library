@@ -5,7 +5,7 @@ import {
     ContextMenuLabel,
     ContextMenuSeparator,
     ContextMenuTrigger,
-} from "@repo/components";
+} from "@shery-ui/components";
 
 export default function ContextMenuDemo() {
     return (
