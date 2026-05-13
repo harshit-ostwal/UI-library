@@ -1,4 +1,4 @@
-import * as Components from "@repo/components";
+import * as Components from "@shery-ui/components";
 import { componentConfigs } from "../registry/componentConfigs.js";
 import { PreviewCanvas } from "./PreviewCanvas.jsx";
 import {
