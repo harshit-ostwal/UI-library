@@ -1,4 +1,4 @@
-import { Label, Switch } from "@repo/components";
+import { Label, Switch } from "@shery-ui/components";
 
 export default function SwitchDemo() {
     return (

@@ -6,7 +6,7 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@repo/components";
+} from "@shery-ui/components";
 
 export default function TableDemo() {
     return (

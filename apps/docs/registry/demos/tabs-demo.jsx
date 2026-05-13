@@ -1,4 +1,4 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@repo/components";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@shery-ui/components";
 
 export default function TabsDemo() {
     return (
