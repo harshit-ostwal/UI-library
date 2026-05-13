@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar } from "@repo/components";
+import { Calendar } from "@shery-ui/components";
 import { useState } from "react";
 
 export default function CalendarDemo() {
