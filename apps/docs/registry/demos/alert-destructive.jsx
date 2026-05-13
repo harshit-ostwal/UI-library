@@ -4,7 +4,7 @@ import {
     AlertDescription,
     AlertTitle,
     Button,
-} from "@repo/components";
+} from "@shery-ui/components";
 import { AlertTriangle } from "lucide-react";
 
 export default function AlertDestructive() {
