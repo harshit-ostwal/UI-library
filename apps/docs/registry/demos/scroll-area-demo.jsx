@@ -1,4 +1,4 @@
-import { ScrollArea } from "@repo/components";
+import { ScrollArea } from "@shery-ui/components";
 
 const tags = Array.from({ length: 24 }, (_, index) => "Tag " + (index + 1));
 

@@ -2,7 +2,7 @@ import {
     ResizableHandle,
     ResizablePanel,
     ResizablePanelGroup,
-} from "@repo/components";
+} from "@shery-ui/components";
 
 export default function ResizableDemo() {
     return (

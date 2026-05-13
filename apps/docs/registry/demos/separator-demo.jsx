@@ -1,4 +1,4 @@
-import { Separator } from "@repo/components";
+import { Separator } from "@shery-ui/components";
 
 export default function SeparatorDemo() {
     return (
