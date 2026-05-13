@@ -3,7 +3,7 @@
     "description": "Displays rich preview content when users hover over a trigger.",
     "component": "HoverCard",
     "installation": {
-        "cli": "npx shery-ui add hover-card",
+        "cli": "npx shery-ui@latest latest add hover-card",
         "manual": [
             {
                 "title": "Install dependencies",

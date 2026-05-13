@@ -3,7 +3,7 @@
     "description": "Displays rich content in a portal, triggered by a button. Supports forms, headers, and alignment control.",
     "component": "Popover",
     "installation": {
-        "cli": "npx shery-ui add popover",
+        "cli": "npx shery-ui@latest add popover",
         "manual": [
             {
                 "title": "Install dependencies",

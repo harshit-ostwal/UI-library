@@ -3,7 +3,7 @@
     "description": "A date picker calendar built on React DayPicker.",
     "component": "Calendar",
     "installation": {
-        "cli": "npx shery-ui add calendar",
+        "cli": "npx shery-ui@latest add calendar",
         "manual": [
             {
                 "title": "Install dependencies",

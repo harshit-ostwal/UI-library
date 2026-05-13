@@ -3,7 +3,7 @@
     "description": "A segmented one-time password input.",
     "component": "InputOTP",
     "installation": {
-        "cli": "npx shery-ui add input-otp",
+        "cli": "npx shery-ui@latest add input-otp",
         "manual": [
             {
                 "title": "Add utility function",

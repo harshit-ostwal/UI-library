@@ -4,7 +4,7 @@
     "component": "DataTable",
 
     "installation": {
-        "cli": "npx shery-ui add table",
+        "cli": "npx shery-ui@latest add table",
 
         "manual": [
             {

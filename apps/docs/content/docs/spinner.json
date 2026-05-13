@@ -3,7 +3,7 @@
     "description": "An animated loading indicator built on Lucide icons. Accepts any Lucide icon via the icon prop.",
     "component": "Spinner",
     "installation": {
-        "cli": "npx shery-ui add spinner",
+        "cli": "npx shery-ui@latest add spinner",
         "manual": [
             {
                 "title": "Install dependencies",

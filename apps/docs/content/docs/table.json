@@ -3,7 +3,7 @@
     "description": "A responsive table for displaying tabular data.",
     "component": "Table",
     "installation": {
-        "cli": "npx shery-ui add table",
+        "cli": "npx shery-ui@latest add table",
         "manual": [
             {
                 "title": "Add utility function",

@@ -3,7 +3,7 @@
     "description": "A horizontal menu for application commands.",
     "component": "Menubar",
     "installation": {
-        "cli": "npx shery-ui add menubar",
+        "cli": "npx shery-ui@latest add menubar",
         "manual": [
             {
                 "title": "Install dependencies",

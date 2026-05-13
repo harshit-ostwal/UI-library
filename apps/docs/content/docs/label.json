@@ -3,7 +3,7 @@
     "description": "Renders an accessible label for form controls.",
     "component": "Label",
     "installation": {
-        "cli": "npx shery-ui add label",
+        "cli": "npx shery-ui@latest add label",
         "manual": [
             {
                 "title": "Install dependencies",

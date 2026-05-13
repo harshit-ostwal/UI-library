@@ -4,7 +4,7 @@
     "component": "ContextMenu",
 
     "installation": {
-        "cli": "npx shery-ui add context-menu",
+        "cli": "npx shery-ui@latest add context-menu",
 
         "manual": [
             {

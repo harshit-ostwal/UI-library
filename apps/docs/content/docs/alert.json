@@ -3,7 +3,7 @@
     "description": "Displays a callout for important user-facing messages with optional actions.",
     "component": "Alert",
     "installation": {
-        "cli": "npx shery-ui add alert",
+        "cli": "npx shery-ui@latest add alert",
         "manual": [
             {
                 "title": "Copy the component code",

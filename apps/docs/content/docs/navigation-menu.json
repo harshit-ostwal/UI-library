@@ -3,7 +3,7 @@
     "description": "A collection of links for site and app navigation.",
     "component": "NavigationMenu",
     "installation": {
-        "cli": "npx shery-ui add navigation-menu",
+        "cli": "npx shery-ui@latest add navigation-menu",
         "manual": [
             {
                 "title": "Install dependencies",

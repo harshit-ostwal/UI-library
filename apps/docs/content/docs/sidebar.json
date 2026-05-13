@@ -3,7 +3,7 @@
     "description": "A sidebar component for building navigation layouts with header, content, menu items, groups, and footer.",
     "component": "Sidebar",
     "installation": {
-        "cli": "npx shery-ui add sidebar",
+        "cli": "npx shery-ui@latest add sidebar",
         "manual": [
             {
                 "title": "Copy the component code",

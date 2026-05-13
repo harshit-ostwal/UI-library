@@ -3,7 +3,7 @@
     "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     "component": "Progress",
     "installation": {
-        "cli": "npx shery-ui add progress",
+        "cli": "npx shery-ui@latest add progress",
         "manual": [
             {
                 "title": "Install dependencies",

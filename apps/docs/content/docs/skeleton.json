@@ -3,7 +3,7 @@
     "description": "A loading placeholder that previews the shape of content.",
     "component": "Skeleton",
     "installation": {
-        "cli": "npx shery-ui add skeleton",
+        "cli": "npx shery-ui@latest add skeleton",
         "manual": [
             {
                 "title": "Add utility function",

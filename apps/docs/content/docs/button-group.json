@@ -3,7 +3,7 @@
     "description": "Groups multiple buttons together in a connected row with optional sizes and dropdown integration.",
     "component": "ButtonGroup",
     "installation": {
-        "cli": "npx shery-ui add buttongroup",
+        "cli": "npx shery-ui@latest add buttongroup",
         "manual": [
             {
                 "title": "Copy the component code",

@@ -3,7 +3,7 @@
     "description": "Resizable panel groups for split views and adjustable layouts.",
     "component": "ResizablePanelGroup",
     "installation": {
-        "cli": "npx shery-ui add resizable",
+        "cli": "npx shery-ui@latest add resizable",
         "manual": [
             {
                 "title": "Install dependencies",

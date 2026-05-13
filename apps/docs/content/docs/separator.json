@@ -3,7 +3,7 @@
     "description": "Visually or semantically separates content.",
     "component": "Separator",
     "installation": {
-        "cli": "npx shery-ui add separator",
+        "cli": "npx shery-ui@latest add separator",
         "manual": [
             {
                 "title": "Install dependencies",

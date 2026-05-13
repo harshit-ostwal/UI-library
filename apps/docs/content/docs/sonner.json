@@ -3,7 +3,7 @@
     "description": "An opinionated toaster component for rendering toast notifications.",
     "component": "Toaster",
     "installation": {
-        "cli": "npx shery-ui add sonner",
+        "cli": "npx shery-ui@latest add sonner",
         "manual": [
             {
                 "title": "Install dependencies",

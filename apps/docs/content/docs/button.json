@@ -3,7 +3,7 @@
     "description": "Displays a button or a component that looks like a button.",
     "component": "Button",
     "installation": {
-        "cli": "npx shery-ui add button",
+        "cli": "npx shery-ui@latest add button",
         "manual": [
             {
                 "title": "Install dependencies",

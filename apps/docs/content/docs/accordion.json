@@ -3,7 +3,7 @@
     "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
     "component": "Accordion",
     "installation": {
-        "cli": "npx shery-ui add accordion",
+        "cli": "npx shery-ui@latest add accordion",
         "manual": [
             {
                 "title": "Copy the component code",

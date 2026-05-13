@@ -3,7 +3,7 @@
     "description": "A multi-line text input with support for custom radius, rows, labels, validation states, and footers.",
     "component": "Textarea",
     "installation": {
-        "cli": "npx shery-ui add textarea",
+        "cli": "npx shery-ui@latest add textarea",
         "manual": [
             {
                 "title": "Add utility function",

@@ -3,7 +3,7 @@
     "description": "A small popup that appears when an element receives hover or focus.",
     "component": "Tooltip",
     "installation": {
-        "cli": "npx shery-ui add tooltip",
+        "cli": "npx shery-ui@latest add tooltip",
         "manual": [
             {
                 "title": "Install dependencies",

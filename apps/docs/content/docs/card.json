@@ -3,7 +3,7 @@
     "description": "Displays content in a structured container with header, body, and footer sections.",
     "component": "Card",
     "installation": {
-        "cli": "npx shery-ui add card",
+        "cli": "npx shery-ui@latest add card",
         "manual": [
             {
                 "title": "Install dependencies",

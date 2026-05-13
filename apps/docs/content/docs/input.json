@@ -3,7 +3,7 @@
     "description": "Displays a form input field.",
     "component": "Input",
     "installation": {
-        "cli": "npx shery-ui add input",
+        "cli": "npx shery-ui@latest add input",
         "manual": [
             {
                 "title": "Add utility function",

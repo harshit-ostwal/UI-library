@@ -3,7 +3,7 @@
     "description": "An accessible checkbox component with multiple variants, sizes, and label support.",
     "component": "Checkbox",
     "installation": {
-        "cli": "npx shery-ui add checkbox",
+        "cli": "npx shery-ui@latest add checkbox",
         "manual": [
             {
                 "title": "Install dependencies",

@@ -3,7 +3,7 @@
     "description": "Displays content within a desired ratio.",
     "component": "AspectRatio",
     "installation": {
-        "cli": "npx shery-ui add aspect-ratio",
+        "cli": "npx shery-ui@latest add aspect-ratio",
         "manual": [
             {
                 "title": "Install dependencies",

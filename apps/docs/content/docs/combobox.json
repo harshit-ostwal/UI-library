@@ -4,7 +4,7 @@
     "component": "Combobox",
 
     "installation": {
-        "cli": "npx shery-ui add combobox",
+        "cli": "npx shery-ui@latest add combobox",
 
         "manual": [
             {

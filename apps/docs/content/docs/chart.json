@@ -3,7 +3,7 @@
     "description": "Composable chart helpers for themed data visualizations.",
     "component": "ChartContainer",
     "installation": {
-        "cli": "npx shery-ui add chart",
+        "cli": "npx shery-ui@latest add chart",
         "manual": [
             {
                 "title": "Install dependencies",

@@ -3,7 +3,7 @@
     "description": "A panel that slides in from the edge of the screen.",
     "component": "Sheet",
     "installation": {
-        "cli": "npx shery-ui add sheet",
+        "cli": "npx shery-ui@latest add sheet",
         "manual": [
             {
                 "title": "Install dependencies",

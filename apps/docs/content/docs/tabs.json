@@ -3,7 +3,7 @@
     "description": "A set of layered sections of content, one visible at a time.",
     "component": "Tabs",
     "installation": {
-        "cli": "npx shery-ui add tabs",
+        "cli": "npx shery-ui@latest add tabs",
         "manual": [
             {
                 "title": "Install dependencies",

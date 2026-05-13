@@ -3,7 +3,7 @@
     "description": "An interactive component that expands and collapses content.",
     "component": "Collapsible",
     "installation": {
-        "cli": "npx shery-ui add collapsible",
+        "cli": "npx shery-ui@latest add collapsible",
         "manual": [
             {
                 "title": "Install dependencies",

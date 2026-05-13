@@ -3,7 +3,7 @@
     "description": "Pagination controls for navigating through pages of content.",
     "component": "Pagination",
     "installation": {
-        "cli": "npx shery-ui add pagination",
+        "cli": "npx shery-ui@latest add pagination",
         "manual": [
             {
                 "title": "Add utility function",

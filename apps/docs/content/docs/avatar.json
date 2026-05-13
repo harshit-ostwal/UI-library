@@ -3,7 +3,7 @@
     "description": "An image element with fallback, status badge, and group stacking support.",
     "component": "Avatar",
     "installation": {
-        "cli": "npx shery-ui add avatar",
+        "cli": "npx shery-ui@latest add avatar",
         "manual": [
             {
                 "title": "Copy the component code",

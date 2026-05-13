@@ -3,7 +3,7 @@
     "description": "A custom scrollable area with styled scrollbars.",
     "component": "ScrollArea",
     "installation": {
-        "cli": "npx shery-ui add scroll-area",
+        "cli": "npx shery-ui@latest add scroll-area",
         "manual": [
             {
                 "title": "Install dependencies",

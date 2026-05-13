@@ -3,7 +3,7 @@
     "description": "Displays keyboard shortcuts and key combinations.",
     "component": "Kbd",
     "installation": {
-        "cli": "npx shery-ui add kbd",
+        "cli": "npx shery-ui@latest latest add kbd",
         "manual": [
             {
                 "title": "Add utility function",
